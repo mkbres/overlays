@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - Mid - Overlay Random select Combo-Box</title>
+<style>
+html {scroll-behavior: smooth;}
+body{margin:0 auto;width:100%;color:#000;}
+
+.xcr::-webkit-scrollbar {width:10px;}.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#0CC;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #333;}* {box-sizing: border-box;}html{}* {box-sizing:border-box;}.line::after {content: "";clear: both;display: inline-table;}[class*="cl-"] {float: left;padding: 15px;border: 0px solid red;}.cl-1 {width: 8.33%;}.cl-2 {width: 16.66%;}.cl-3 {width: 25%;}.cl-4 {width: 33.33%;}.cl-5 {width: 41.66%;}.cl-6 {width: 50%;}.cl-7 {width: 58.33%;}.cl-8 {width: 66.66%;}.cl-9 {width: 75%;}.cl-10 {width: 83.33%;}.cl-11 {width: 91.66%;}.cl-12 {width: 100%;}.no{padding:0;}.tleft {text-align:left;}.tright {text-align:right;}.tcenter {text-align:center;}.tfleft {float:left;}.tfright {float:right;}.imgresp img, img.imgresp{display:block;width:100%;height:auto;margin:0 auto;}
+.divider{opacity:0;}
+
+a:link {
+	color: #0CC;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #0CC;
+}
+a:hover {
+	text-decoration: none;
+	color: #F60;
+}
+a:active {
+	text-decoration: none;
+	color: #F60;
+}
+
+/*combo box style end */
+.tab #make-1,
+.tab #make-2,
+.tab #make-3,
+.tab #make-4,
+.tab #make-5,
+.tab #make-6,
+.tab #make-7,
+.tab #make-8,
+.tab #make-9,
+.tab #make-10,
+.tab #make-11,
+.tab #make-12,
+.tab #make-13,
+.tab #make-14,
+.tab #make-15,
+.tab #make-16,
+.tab #make-17,
+.tab #make-18,
+.tab #make-19,
+.tab #make-20,
+.tab #make-21,
+.tab #make-22,
+.tab #make-23,
+.tab #make-24,
+.tab #make-25,
+.tab #make-26,
+.tab #make-27,
+.tab #make-28,
+.tab #make-29,
+.tab #make-30{display:none;}
+.tab #make-1:target,
+.tab #make-2:target,
+.tab #make-3:target,
+.tab #make-4:target,
+.tab #make-5:target,
+.tab #make-6:target,
+.tab #make-7:target,
+.tab #make-8:target,
+.tab #make-9:target,
+.tab #make-10:target,
+.tab #make-11:target,
+.tab #make-12:target,
+.tab #make-13:target,
+.tab #make-14:target,
+.tab #make-15:target,
+.tab #make-16:target,
+.tab #make-17:target,
+.tab #make-18:target,
+.tab #make-19:target,
+.tab #make-20:target,
+.tab #make-21:target,
+.tab #make-22:target,
+.tab #make-23:target,
+.tab #make-24:target,
+.tab #make-25:target,
+.tab #make-26:target,
+.tab #make-27:target,
+.tab #make-28:target,
+.tab #make-29:target,
+.tab #make-30:target{display:block;z-index:10000;display:block;width:100vw;height:100vh;margin:0 auto;position:fixed;top:0;left:0;background-color:rgba(0,0,0,0.70);padding:20px;}
+
+
+
+.box{display:block;width:70%;height:auto;padding:20px;margin:7% auto 3% auto;background-color:#fff;color:#666;font-size: calc(14px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+
+.selected{width:450px;height:550px;border-radius:5px 5px 5px 5px;background: rgb(255,147,190);
+background: -moz-linear-gradient(90deg, rgba(255,147,190,1) 0%, rgba(145,233,218,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,147,190,1) 0%, rgba(145,233,218,1) 100%);
+background: linear-gradient(90deg, rgba(255,147,190,1) 0%, rgba(145,233,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff93be",endColorstr="#91e9da",GradientType=1);text-align:center;margin:10px auto 12px auto;font-size: calc(14px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:normal;-webkit-box-shadow:inset 0 4px 8px #999;box-shadow:inset 0 4px 8px #999;padding:10px 20px 11px;overflow:auto; outline:none;color:#ffffff!important;transform:scale(1.1,1.1);}
+
+.btn{padding:8px 12px;text-align:center;background-color:#09C;color:#fff; border:0; outline:none;cursor:pointer;-webkit-border-radius:4px;border-radius:4px;font-size: calc(14px + 6 * ((100vw - 320px) / 680));}
+.btn:hover{background-color:#F93;color:#fff;}
+
+.close{display:block;width:100%;height:20px;margin:0 auto;text-align:right;transform:translateY(-29%);top:-40px;}
+option:focus,
+option:selected{color:#fff;}
+option:checked {background: linear-gradient(rgba(255,255,255,0.8), rgba(204,204,204,.1));border:1px solid #666;border-radius:5px;mix-blend-mode:overlay;filter:brightness(70%) contrast(230%) ;}
+#ranform value:checked{color:#fff!important;}
+
+.svg-icon-inchide {width: 1.5em;height: 1.5em;background-color:#09C;transform:translateY(-10%);}
+.svg-icon-inchide path,
+.svg-icon-inchide polygon,
+.svg-icon-inchide rect {fill: #fff;}
+.svg-icon-inchide circle {stroke: #fff;stroke-width: 1;}
+.close a:hover .svg-icon-inchide {width: 1.5em;height: 1.5em;background-color:#F93;}
+.marketerbay{margin:20px auto 12px auto;}
+#randommk{position:absolute;}
+</style>
+</head>
+
+<body>
+
+<div id="wrap" class="cl-12">
+
+<div class="cl-12 tcenter">
+<div id="randommk">
+<form class="randommkheader" target="_self">
+<select size="19" id="ranform" class="selected xcr" onChange="animatedList.navigate('ranform')" disabled="disabled">
+<option value="#make-1">5</option>
+<option value="#make-2">12</option>
+<option value="#make-3">53</option>
+<option value="#make-4">27</option>
+<option value="#make-5">13</option>
+<option value="#make-6">7</option>
+<option value="#make-7">73</option>
+<option value="#make-8">84</option>
+<option value="#make-9">26</option>
+<option value="#make-10">16</option>
+<option value="#make-11">46</option>
+<option value="#make-12">33</option>
+<option value="#make-13">71</option>
+<option value="#make-14">62</option>
+<option value="#make-15">44</option>
+
+</select>
+<div class="cl-12 tcenter marketerbay">
+<input type="button" onclick="animatedList.randomizeInit('ranform')" class="btn" value="RANDOM LUCKY NUMBER">
+</div>
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+/***********************************************
+* Random Select Combo-Box
+* MarketerBay.com
+* Twitter/Instagram : @marketerbay_com
+***********************************************/
+
+var animatedList={
+
+navigate:function(selectId){
+	this.selectObj=document.getElementById(selectId)
+	window.location=this.selectObj[this.selectObj.selectedIndex].value
+},
+
+randomizeInit:function(selectId){
+	this.selectObj=document.getElementById(selectId)
+	this.curframe=0
+	this.optionscount=this.selectObj.options.length
+ 
+	this.maxframes=Math.floor(Math.random()*this.optionscount)+Math.floor(Math.random()*this.optionscount)
+	this.randomize()
+},
+
+
+randomize:function(){
+	if (this.curframe<this.maxframes)
+		this.selectObj.selectedIndex=this.settledIndex=(this.curframe<this.optionscount)? this.curframe : this.curframe-this.optionscount
+	else{ 
+		this.selectObj.selectedIndex=(this.selectObj.selectedIndex==-1)? this.settledIndex : -1
+	}
+	this.curframe++
+	if (this.curframe<this.maxframes+4) //Keep running this function until "maxframes" cycle plus 4
+		setTimeout("animatedList.randomize()", 100)
+	else
+		window.location=this.selectObj[this.selectObj.selectedIndex].value
+}
+
+
+}
+
+</script>
+</div><!--div wrap --->
+<!--- End  --->
+<div class="tab">
+      
+      
+      
+<div id="make-1">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 1</p>
+</div>
+</div></div>
+
+
+<div id="make-2">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 2</p>
+</div>
+</div></div>
+
+
+
+<div id="make-3">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 3</p>
+</div>
+</div></div>
+
+
+<div id="make-4">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 4</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-5">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 5</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-6">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 6</p>
+</div>
+</div></div>
+
+
+<div id="make-7">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 7</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-8">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 8</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-9">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 9</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-10">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 10</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-11">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 11</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-12">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 12</p>
+</div>
+</div></div>
+
+
+
+      
+<div id="make-13">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 13</p>
+</div>
+</div></div>
+
+
+<div id="make-14">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 14</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-15">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 15</p>
+</div>
+</div></div>
+
+<!---
+To enable all options (30 in total) 
+You'll also need to add the option in random 
+
+<option value="#make-16">34</option>
+<option value="#make-17">21</option>
+<option value="#make-18">88</option>
+... so on ...
+<option value="#make-30">1</option>
+--->
+<div id="make-16">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 16</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-17">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 17</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-18">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 18</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-19">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 19</p>
+</div>
+</div></div>
+
+
+
+
+
+
+<div id="make-20">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 21</p>
+</div>
+</div></div>
+
+
+
+<div id="make-21">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 21</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-22">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 22</p>
+</div>
+</div></div>
+
+
+
+      
+<div id="make-23">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 23</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-24">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 24</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-25">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 25</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-26">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 26</p>
+</div>
+</div></div>
+
+
+
+
+<div id="make-27">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 27</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-28">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 28</p>
+</div>
+</div></div>
+
+
+
+
+
+
+<div id="make-29">
+<div class="box">
+<div class="close"><a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a></div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 29</p>
+</div>
+</div></div>
+
+
+
+
+
+<div id="make-30">
+<div class="box">
+    <div class="close">
+         <a href="#!"><svg class="svg-icon-inchide" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path></svg></a>
+     </div>
+  <div contenteditable="true">
+        <p>Add your own text-based content here 30</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("randommk"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+
+
+</body>
+</html>

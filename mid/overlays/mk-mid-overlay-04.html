@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - OBS OVERLAY - Top Tippers</title>
+<style>
+body{width:100vw;height:100vh;overflow:hidden;font-size: calc(15px + 6 * ((100vw - 320px) / 680));color:#fff;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+
+
+/*** Top Tippers ***/
+#tippers{display:block;min-width:450px;min-height:560px;position: absolute;z-index: 20;background-color: rgba(0,0,0,0.80);text-align: center;left: 40px;top: 41px;border-radius:6px 10px 10px 6px;padding:0px 0px 20px;box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5),0 18px 16px -15px #F6C;}
+#tippersheader {display:block;width:100%;padding: 30px 0px 24px;cursor: move;z-index: 21;background-color: rgb(222 10 110);color: #fff;font-size:22px;}
+.resizeable {resize: both;overflow: auto;transform:scale(1.1,1.1);}
+.premiums{display:block;width:100%;height:auto;margin:10px auto 12px auto;padding:20px 0px 20px;}
+.premiums p{display:block;width:90%;height:auto;margin:0 auto;padding:5px 0px 5px;color:#fff;font-size: calc(15px + 6 * ((100vw - 320px) / 680));text-align:center;font-weight:100;}
+#q{display:block;width:30px;height:30px;top:70px;right:20px;margin-bottom:-30px;background-color:rgb(222 10 110);tranform:translate(100%,100%);float:right;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ffffff'%3E%3Cpath d='M15.94,10.179l-2.437-0.325l1.62-7.379c0.047-0.235-0.132-0.458-0.372-0.458H5.25c-0.241,0-0.42,0.223-0.373,0.458l1.634,7.376L4.06,10.179c-0.312,0.041-0.446,0.425-0.214,0.649l2.864,2.759l-0.724,3.947c-0.058,0.315,0.277,0.554,0.559,0.401l3.457-1.916l3.456,1.916c-0.419-0.238,0.56,0.439,0.56-0.401l-0.725-3.947l2.863-2.759C16.388,10.604,16.254,10.22,15.94,10.179M10.381,2.778h3.902l-1.536,6.977L12.036,9.66l-1.655-3.546V2.778z M5.717,2.778h3.903v3.335L7.965,9.66L7.268,9.753L5.717,2.778zM12.618,13.182c-0.092,0.088-0.134,0.217-0.11,0.343l0.615,3.356l-2.938-1.629c-0.057-0.03-0.122-0.048-0.184-0.048c-0.063,0-0.128,0.018-0.185,0.048l-2.938,1.629l0.616-3.356c0.022-0.126-0.019-0.255-0.11-0.343l-2.441-2.354l3.329-0.441c0.128-0.017,0.24-0.099,0.295-0.215l1.435-3.073l1.435,3.073c0.055,0.116,0.167,0.198,0.294,0.215l3.329,0.441L12.618,13.182z'%3E%3C/path%3E%3C/svg%3E");z-index:30;}
+#tippers #q .info{display:block;width:50%;height:0px;padding:0;text-align:center;background-color:rgb(222 10 110);color:#fff;position:absolute;bottom:10px;left:60px;z-index:100;transition: .4s ease-in-out;opacity:0;overflow:hidden;border-radius:5px;}
+#tippers  #q:hover .info{display:block;width:50%;height:auto;padding:.5em 2.3em .5em;text-align:center;background-color:rgb(222 10 110);font-size: calc(10px + 6 * ((100vw - 320px) / 680));color:#fff;position:absolute;bottom:10px;left:60px;opacity:1;clip-path: polygon(3% 0, 98% 0, 100% 50%, 98% 100%, 3% 100%, 0% 50%);}
+#tippersheader span{padding:.3em 2em .3em;text-align:center;background-color: transparent;border-radius:10px;box-shadow:inset 0 0 10px #000,3px 0 3px #F6C,-3px 0 3px #F6C;border-top:1px solid #F39;border-bottom:1px solid #F39;transform:translateY(30px);font-size: calc(17px + 6 * ((100vw - 320px) / 680));font-weight:400;text-transform:uppercase;}
+
+.refreshit{display:block;width:90%;height:auto;float:none;clear:right;text-align:center;margin:20px auto 22px auto;opacity:0;transform:translateX(-10px);transition: .5s ease-in-out}
+.svg-icon-refresh {width: 2em;height: 2em;transform:translateY(20px);}
+.svg-icon-refresh path,
+.svg-icon-refresh polygon,
+.svg-icon-refresh rect {fill: #ffffff;}
+.svg-icon-refresh circle {stroke: #ffffff;stroke-width: 1;}
+
+.refreshit a span.ratio-16{text-align:center;padding:.2em 0em .5em;background-color:#F06;border-radius:50px;box-shadow:inset 0 -1px 0px rgba(255,255,255,0.40),0 1px 0px #F03, 0 2px 0px #F03, 0 3px 0px #F03, 0 4px 6px #000;transition:all .3s}
+.refreshit a span.ratio-16:hover{background-color:rgb(222 10 110);box-shadow:inset 0 -1px 0px rgba(255,255,255,0.70),0 1px 0px #F03,0 2px 5px #000, 0 0 8px #333;}
+#tippers:hover .refreshit{display:block;width:90%;height:auto;float:none;clear:right;text-align:center;margin:20px auto 22px auto;opacity:1;transform:translateX(0px);}
+</style>
+</head>
+
+<body>
+
+
+
+<div id="tippers" class="resizeable">
+  <div id="tippersheader"><span contenteditable="true">My Top Tippers</span></div>
+  <div class="premiums">
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+     <p contenteditable="true" spellcheck="false">Type a Premium's Username</p>
+  </div>
+  
+  <div id="q">
+  <div class="info">
+Hold Click &amp; Drag the right-bottom corner of <strong>My Top Tippers</strong> modal to resize it<br>
+Hold Click &amp; Drag the header of <strong>My Top Tippers</strong> modal to move it around the screen
+  </div>
+  </div>
+  
+  
+ <div class="refreshit"><a href="javascript:window.location.reload(true)"><span class="ratio-16"><svg class="svg-icon-refresh" viewBox="0 0 20 20">
+							<path d="M12.319,5.792L8.836,2.328C8.589,2.08,8.269,2.295,8.269,2.573v1.534C8.115,4.091,7.937,4.084,7.783,4.084c-2.592,0-4.7,2.097-4.7,4.676c0,1.749,0.968,3.337,2.528,4.146c0.352,0.194,0.651-0.257,0.424-0.529c-0.415-0.492-0.643-1.118-0.643-1.762c0-1.514,1.261-2.747,2.787-2.747c0.029,0,0.06,0,0.09,0.002v1.632c0,0.335,0.378,0.435,0.568,0.245l3.483-3.464C12.455,6.147,12.455,5.928,12.319,5.792 M8.938,8.67V7.554c0-0.411-0.528-0.377-0.781-0.377c-1.906,0-3.457,1.542-3.457,3.438c0,0.271,0.033,0.542,0.097,0.805C4.149,10.7,3.775,9.762,3.775,8.76c0-2.197,1.798-3.985,4.008-3.985c0.251,0,0.501,0.023,0.744,0.069c0.212,0.039,0.412-0.124,0.412-0.34v-1.1l2.646,2.633L8.938,8.67z M14.389,7.107c-0.34-0.18-0.662,0.244-0.424,0.529c0.416,0.493,0.644,1.118,0.644,1.762c0,1.515-1.272,2.747-2.798,2.747c-0.029,0-0.061,0-0.089-0.002v-1.631c0-0.354-0.382-0.419-0.558-0.246l-3.482,3.465c-0.136,0.136-0.136,0.355,0,0.49l3.482,3.465c0.189,0.186,0.568,0.096,0.568-0.245v-1.533c0.153,0.016,0.331,0.022,0.484,0.022c2.592,0,4.7-2.098,4.7-4.677C16.917,9.506,15.948,7.917,14.389,7.107 M12.217,15.238c-0.251,0-0.501-0.022-0.743-0.069c-0.212-0.039-0.411,0.125-0.411,0.341v1.101l-2.646-2.634l2.646-2.633v1.116c0,0.174,0.126,0.318,0.295,0.343c0.158,0.024,0.318,0.034,0.486,0.034c1.905,0,3.456-1.542,3.456-3.438c0-0.271-0.032-0.541-0.097-0.804c0.648,0.719,1.022,1.659,1.022,2.66C16.226,13.451,14.428,15.238,12.217,15.238"></path>
+						</svg></span></a></div> 
+</div>
+
+
+
+
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("tippers"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+</body>
+</html>

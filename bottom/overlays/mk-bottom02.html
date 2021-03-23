@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - Bottom Overlay 02</title>
+<style>
+
+*{box-sizing:border-box}
+body{width:100%;margin:0 auto;}
+#mk-container{display:block;width:100%;height:auto;margin:0 auto;position:fixed;bottom:0;left:0;background-color:rgba(0,0,0,.2);font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+.row:after{content:'';display:inline-table;clear:both;}
+.sides{display:block;width:50%;height:auto;float:left;}
+.sides p{display:block;width:90%;padding:.4em 0em .4em;height:auto;margin:0 auto;font-size: calc(16px + 6 * ((100vw - 320px) / 680));font-weight:500;color:#ffffff;text-transform:uppercase;font-style:italic;text-shadow:0 1px 0 #000;}
+.tleft{text-align:left;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+.clock strong{display:block;max-width:200px;float:right;font-style:normal;padding:.5em 1em .5em;font-size: calc(12px + 6 * ((100vw - 320px) / 680));background-color:rgba(0,0,0,.6);border-radius:5px;text-align:center;font-family:"Lucida Console", Monaco, monospace;margin-top:-5px;}
+/*** SVG Timer Icon ***/
+.svg-icon-timer {width: 1.4em;height: 1.4em;margin-right:0;background-color:#555;border-radius:5px 0 0 5px;}
+.svg-icon-timer path,
+.svg-icon-timer polygon,
+.svg-icon-timer rect {fill: #cccccc;}
+.svg-icon-timer circle {stroke: #cccccc;stroke-width: 2;}
+
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+</style>
+</head>
+
+<body>
+
+  <div id="mk-container">
+  
+    <div class="row">
+    
+      <div class="sides tleft">
+        <p contenteditable="true" spellcheck="false">User Name</p>
+      </div>
+      
+      <div class="sides tright clock">
+      <p><svg class="svg-icon-timer" viewBox="0 0 20 20">
+							<path d="M10.25,2.375c-4.212,0-7.625,3.413-7.625,7.625s3.413,7.625,7.625,7.625s7.625-3.413,7.625-7.625S14.462,2.375,10.25,2.375M10.651,16.811v-0.403c0-0.221-0.181-0.401-0.401-0.401s-0.401,0.181-0.401,0.401v0.403c-3.443-0.201-6.208-2.966-6.409-6.409h0.404c0.22,0,0.401-0.181,0.401-0.401S4.063,9.599,3.843,9.599H3.439C3.64,6.155,6.405,3.391,9.849,3.19v0.403c0,0.22,0.181,0.401,0.401,0.401s0.401-0.181,0.401-0.401V3.19c3.443,0.201,6.208,2.965,6.409,6.409h-0.404c-0.22,0-0.4,0.181-0.4,0.401s0.181,0.401,0.4,0.401h0.404C16.859,13.845,14.095,16.609,10.651,16.811 M12.662,12.412c-0.156,0.156-0.409,0.159-0.568,0l-2.127-2.129C9.986,10.302,9.849,10.192,9.849,10V5.184c0-0.221,0.181-0.401,0.401-0.401s0.401,0.181,0.401,0.401v4.651l2.011,2.008C12.818,12.001,12.818,12.256,12.662,12.412"></path>
+						</svg><strong id="mktime"></strong></p>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+  
+<script>
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+        document.getElementById('mktime').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
+</script>
+
+</body>
+</html>
