@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" class="marketerbay-svg-ops">
+	<style>
+	svg.marketerbay-svg-ops{
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	line-height:normal;font-weight:500;background-blend-mode:screen;opacity:1;width:100vw;height:100vh;background: rgb(0,0,0);
+background: -moz-radial-gradient(circle, rgba(0,0,0,0.2638448934261205) 0%, rgba(84,158,156,0.5215479746586135) 42%, rgba(115,158,84,0.5215479746586135) 78%);
+background: -webkit-radial-gradient(circle, rgba(0,0,0,0.2638448934261205) 0%, rgba(84,158,156,0.5215479746586135) 42%, rgba(115,158,84,0.5215479746586135) 78%);
+background: radial-gradient(circle, rgba(0,0,0,0.2638448934261205) 0%, rgba(84,158,156,0.5215479746586135) 42%, rgba(115,158,84,0.5215479746586135) 78%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#739e54",GradientType=1);}
+	
+		tspan { white-space:pre }
+		.mk-shapedown{ opacity: 0.2;fill: #ffffff }
+		.mk-shapeup { opacity: 0.2;fill: #ffffff }
+		
+		
+		 
+		.mk-letter-O{ 
+		font-size: 4vw; /* Change font size */
+		fill: #ffffff;  /* Change color of the text */
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; 
+		opacity: 0.502; /* Change opacity of the text */
+		font-weight:700;
+		animation: MKBlink 2s infinite; animation-delay:2s;
+		}
+		
+		.mk-letter-P{ 
+		font-size: 4vw;
+		fill: #ffffff;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; 
+		opacity: 0.502;
+		font-weight:700;
+		animation: MKBlink 2.5s infinite; animation-delay:1.5s;
+		}
+		
+		.mk-letter-S { 
+		font-size: 4vw;
+		fill: #ffffff;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; 
+		opacity: 0.502;
+		font-weight:700;
+		animation: MKBlink 2.7s infinite; animation-delay:1.2s;
+		} 
+		
+		.mk-add-your-text { 
+		font-size: 1.7vw;
+		fill: #ffffff;
+		text-anchor: middle; /*** change anchor, use left or right to start the text from ***/
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; 
+		font-weight:100;
+		} 
+		
+		.mknumber-3 { 
+		font-size: 3vw;
+		fill: #ffffff;
+		text-anchor: middle;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; 
+		font-weight:400;
+		opacity: 0.5;
+		animation: MKBlink 3s infinite;
+		} 
+		@keyframes MKBlink{
+		  0%{opacity:.5;}
+		  10%{opacity:.5;}
+		  11%{opacity:.3;}
+		  12%{opacity:.3;fill:#25faec;}
+		  13%{opacity:.5;fill:#25faec;mix-blend-mode:screen;}
+		  14%{opacity:.5;fill:#25faec;mix-blend-mode:screen;}
+		  15%{opacity:.5;}
+		  16%{opacity:.5;}
+		  17%{opacity:.3;}
+		  18%{opacity:.0;}
+		  19%{opacity:.3;}
+		  20%{opacity:.3;}
+		  25%{opacity:.5;}
+		  50%{opacity:.5;}
+		  75%{opacity:.5;}
+		  76%{opacity:.5;filter:drop-shadow(0 0 5px #25faec);fill:#25faec;mix-blend-mode:screen;}
+		  77%{opacity:.5;fill:#25faec;mix-blend-mode:screen;}
+		  78%{opacity:.0;}
+		  79%{opacity:.5;}
+		  80%{opacity:.5;}
+		  81%{opacity:.0;}
+		  82%{opacity:.5;}
+		  83%{opacity:.5;}
+		  85%{opacity:.5;}
+		  100%{opacity:.5;}
+		}
+	</style>
+	<path id="liner-D" class="mk-shapedown" d="M36 431L358.78 431L387 447L58.58 447L36 431Z" />
+	<text id="O" style="transform: matrix(1,0,0,1,375,444)" >
+		<tspan x="0" y="0" class="mk-letter-O">O</tspan>
+	</text>
+	<text id="P" style="transform: matrix(1,0,0,1,427,444)" >
+		<tspan x="0" y="0" class="mk-letter-P">P</tspan>
+	</text>
+	<text id="S" style="transform: matrix(1,0,0,1,469,444)" >
+		<tspan x="0" y="0" class="mk-letter-S">S</tspan>
+	</text>
+	<path id="liner-U" class="mk-shapeup" d="M586.58 388L498.95 388L520.29 404L564 404L586.58 388Z" />
+	<text id="mk-custom-text" style="opacity: 0.502;transform: matrix(1,0,0,1,220,471)" >
+		<tspan x="0" y="0" class="mk-add-your-text">ADD YOUR OWN TEXT HERE</tspan>
+	</text>
+	<text id="mknumber-3" style="transform: matrix(1,0,0,1,543,444)" >
+		<tspan x="0" y="0" class="mknumber-3">3</tspan>
+	</text>
+</svg>

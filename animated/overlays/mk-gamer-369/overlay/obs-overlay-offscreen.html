@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay Overlay - Full screen - Away Screen</title>
+<style>
+*{box-sizing:border-box;}
+body{font-size: calc(17px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;overflow:hidden;}
+/*** Custom ScrollBar ***/
+.xcr::-webkit-scrollbar {width:5px;}
+.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.1);-webkit-border-radius:1px;border-radius:1px;}
+.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#4691f6;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+.xcr::-webkit-scrollbar-thumb:window-inactive {background: rgba(0%,100%,100%,.2);border:1px solid #000;}
+/*** Col ***/
+.cols-1 {width: 8.33%;}.cols-2 {width: 16.66%;}.cols-3 {width: 25%;}.cols-4 {width: 33.33%;}.cols-5 {width: 41.66%;}.cols-5-half {width: 47.66%;}.cols-6 {width: 50%;}.cols-7 {width: 58.33%;}.cols-8 {width: 66.66%;}.cols-9 {width: 75%;}.cols-10 {width: 83.33%;}.cols-11 {width: 91.66%;}.cols-12 {width: 100%;}[class*="cols-"] {float: left;padding: 15px;border: 0px solid #ccc;}[class*="no"] {float: left;padding: 0;}[class*="padd20"]{display:block;padding:20px;}.row:after {content: "";clear: both;display: inline-table;}
+/*** Align ***/
+.tleft {text-align:left;}
+.tright {text-align:right;}
+.tcenter {text-align:center;}
+/*** Floats ***/
+.tfleft {float:left;}
+.tfright {float:right;}
+.nofloat{float:none;}
+
+.clearfix {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+/*** Responsive IMG ***/
+.imgresp img,img.imgresp{display:block;width:100%;height:auto;margin:0 auto;}
+
+#main{z-index:99;}
+.bgsections{background-color:rgba(0,0,0,0.40);}
+
+
+
+.darkereffect {display:block;width:100%;height:100%;margin:0 auto;position:fixed;top:0;left:0;z-index:-1;padding:0;margin:0 auto;
+  background-image: url('images/gabg1.jpg'), radial-gradient(#09C, #000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+  background-size: cover;
+  background-position: center;
+ background-blend-mode: overlay;}
+ 
+ .secondeffect{display:block;width:100%;height:100%;margin:0 auto;top:0;left:0;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADAgMAAAArRl0sAAAAAXNSR0IB2cksfwAAAAlQTFRF////AAAAAAAAflGpXQAAAAN0Uk5TAKEATWpJdgAAAA5JREFUeJxjYGGQYMgAAADKAIUNkoRaAAAAAElFTkSuQmCC"), url('images/ops-custom.svg');
+ background-repeat:repeat, no-repeat;
+ background-position:0 0, bottom right;
+ background-size: auto, auto 100vw;
+   background-blend-mode:overlay;
+  opacity:0.5;
+  }
+  
+.hidepanel{transform:translateY(-120%);transition: ease-in-out 2s;}
+.showpanel{}
+#panel{display:block;width:80vw;height:80vh;background-color:rgba(0,0,0,0.8);padding:.5em;margin:2% auto 1% auto;transition: ease-in-out 1s;border-left:5px solid rgba(51,255,255,.3);border-right:5px solid rgba(51,255,255,.5);border-top:1px solid rgba(51,255,255,.3);border-bottom:1px solid rgba(51,255,255,.3);animation: DoBorder 2s infinite;filter:drop-shadow(0 1px 1px rgba(51,255,255,.5));filter:drop-shadow(0 31px 12px rgba(0,0,0,.5));oveflow:hidden;}
+.boxed{max-height:40vh;overflow:auto;}
+.gtitle{display:block;width:100%;max-height:160px;padding:.3em 0em .3em;margin:0 auto;text-align:center;overflow:hidden;}
+.gtitle h1{font-size:4.33vw;color:#09C;line-height:normal;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;text-shadow:0 1px 0 #099, 0 2px 0 #099,0 3px 2px #000;text-transform:uppercase;}
+.gtitle p,.boxed p{display:block;width:90%;height:auto;margin:0 auto;text-indent:3px;padding:.3em;font-size:1.53vw;color:#09C;}
+.kiudi{transform:translate(0);cursor:pointer;background-color:transparent;}
+
+.svg-icon-soclose {width: 2em;height: 2em;}
+.svg-icon-soclose path,
+.svg-icon-soclose polygon,
+.svg-icon-soclose rect {fill: #4691f6;}
+.svg-icon-soclose circle {stroke: #4691f6;stroke-width: 1;}
+
+.svg-icon-premium {width: 2em;height: 2em;}
+.svg-icon-premium path,
+.svg-icon-premium polygon,
+.svg-icon-premium rect {fill: #FC3;}
+.svg-icon-premium circle {stroke: #FC3;stroke-width: 1;}
+
+/*** Style-up Time ***/
+.ditime{display:block;width:300px;height:auto;background-color:rgba(0,0,0,.7);text-align:center;padding:.5em;position:fixed;bottom:-10px;right:80px;color:#4691f6;font-weight:300;font-size:3vw;}.ditime:after{content:'HH:MM:SS';display:block;width:300px;font-size:13px;margin-top:-5px;letter-spacing:4px;text-align:center;margin-left:-22px;}
+
+
+/*** Selection styled up ***/
+::-moz-selection {color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.10);border:none;box-shadow:none; outline:none;}
+button{background:none;border:none; outline:none;}
+*{text-decoration:none;}
+.clearfix:after {clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}
+* html .clearfix {height:1%;}
+</style>
+</head>
+
+
+<body>
+  <div class="darkereffect">
+    <div class="secondeffect"><a href="obs-overlay.html" target="_self"><svg class="svg-icon-premium" viewBox="0 0 20 20">
+							<path d="M15.94,10.179l-2.437-0.325l1.62-7.379c0.047-0.235-0.132-0.458-0.372-0.458H5.25c-0.241,0-0.42,0.223-0.373,0.458l1.634,7.376L4.06,10.179c-0.312,0.041-0.446,0.425-0.214,0.649l2.864,2.759l-0.724,3.947c-0.058,0.315,0.277,0.554,0.559,0.401l3.457-1.916l3.456,1.916c-0.419-0.238,0.56,0.439,0.56-0.401l-0.725-3.947l2.863-2.759C16.388,10.604,16.254,10.22,15.94,10.179M10.381,2.778h3.902l-1.536,6.977L12.036,9.66l-1.655-3.546V2.778z M5.717,2.778h3.903v3.335L7.965,9.66L7.268,9.753L5.717,2.778zM12.618,13.182c-0.092,0.088-0.134,0.217-0.11,0.343l0.615,3.356l-2.938-1.629c-0.057-0.03-0.122-0.048-0.184-0.048c-0.063,0-0.128,0.018-0.185,0.048l-2.938,1.629l0.616-3.356c0.022-0.126-0.019-0.255-0.11-0.343l-2.441-2.354l3.329-0.441c0.128-0.017,0.24-0.099,0.295-0.215l1.435-3.073l1.435,3.073c0.055,0.116,0.167,0.198,0.294,0.215l3.329,0.441L12.618,13.182z"></path>
+						</svg></a></div>
+  </div>
+
+
+
+  <div id="panel" class=" ">
+      
+      <div class="gtitle"><h1 contenteditable="true" spellcheck="false">Marketerbay.com</h1></div>
+      <div class="cols-12 xcr boxed" contenteditable="true" spellcheck="false">
+        <p>This is an full-screen overlay for OBS</p>
+        <p>Shows an editable title, text-based content box (this particular text can be edited) and local time</p>
+        <p>Using Interact OBS feature the content can be edited directly from your session without writing a single line of code</p>
+        <p>Oh.... yes, there's a small button on the bottom right on this screen. When click, it toggles visibility for this entire section.</p>
+      </div>
+      
+      
+  </div>
+
+
+<div class="cols-12 bottomwrapper">
+
+   <button class="kiudi" onclick="showPanel()"><svg class="svg-icon-soclose" viewBox="0 0 20 20">
+							<path d="M6.176,7.241V6.78c0-0.221-0.181-0.402-0.402-0.402c-0.221,0-0.403,0.181-0.403,0.402v0.461C4.79,7.416,4.365,7.955,4.365,8.591c0,0.636,0.424,1.175,1.006,1.35v3.278c0,0.222,0.182,0.402,0.403,0.402c0.222,0,0.402-0.181,0.402-0.402V9.941c0.582-0.175,1.006-0.714,1.006-1.35C7.183,7.955,6.758,7.416,6.176,7.241 M5.774,9.195c-0.332,0-0.604-0.272-0.604-0.604c0-0.332,0.272-0.604,0.604-0.604c0.332,0,0.604,0.272,0.604,0.604C6.377,8.923,6.105,9.195,5.774,9.195 M10.402,10.058V6.78c0-0.221-0.181-0.402-0.402-0.402c-0.222,0-0.402,0.181-0.402,0.402v3.278c-0.582,0.175-1.006,0.714-1.006,1.35c0,0.637,0.424,1.175,1.006,1.351v0.461c0,0.222,0.181,0.402,0.402,0.402c0.221,0,0.402-0.181,0.402-0.402v-0.461c0.582-0.176,1.006-0.714,1.006-1.351C11.408,10.772,10.984,10.233,10.402,10.058M10,12.013c-0.333,0-0.604-0.272-0.604-0.604S9.667,10.805,10,10.805c0.332,0,0.604,0.271,0.604,0.604S10.332,12.013,10,12.013M14.629,8.448V6.78c0-0.221-0.182-0.402-0.403-0.402c-0.221,0-0.402,0.181-0.402,0.402v1.668c-0.581,0.175-1.006,0.714-1.006,1.35c0,0.636,0.425,1.176,1.006,1.351v2.07c0,0.222,0.182,0.402,0.402,0.402c0.222,0,0.403-0.181,0.403-0.402v-2.07c0.581-0.175,1.006-0.715,1.006-1.351C15.635,9.163,15.21,8.624,14.629,8.448 M14.226,10.402c-0.331,0-0.604-0.272-0.604-0.604c0-0.332,0.272-0.604,0.604-0.604c0.332,0,0.604,0.272,0.604,0.604C14.83,10.13,14.558,10.402,14.226,10.402 M17.647,3.962H2.353c-0.221,0-0.402,0.181-0.402,0.402v11.27c0,0.222,0.181,0.402,0.402,0.402h15.295c0.222,0,0.402-0.181,0.402-0.402V4.365C18.05,4.144,17.869,3.962,17.647,3.962 M17.245,15.232H2.755V4.768h14.49V15.232z"></path>
+						</svg></button>
+<div class="tfright"><strong id="mktime" class="ditime"></strong></div>
+
+</div>
+
+
+
+<script>
+// Box Hide/Show 
+ function showPanel() {
+  var element = document.getElementById("panel");
+element.classList.toggle("hidepanel");
+}
+
+
+
+
+// Show Time
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+        document.getElementById('mktime').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
+</script>
+
+</body>
+
+</html>

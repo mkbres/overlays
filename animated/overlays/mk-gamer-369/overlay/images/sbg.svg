@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300" class="effect overlayz">
+	<style>
+	svg.effect{transform:rotate(0deg) scale(.5);transform-origin:bottom center;opacity:1}
+		tspan { white-space:pre }
+		.s1{ fill: #5c8d96;transform:translateY(-60px);}
+		.s2{ fill: #5c8d96;transform:translateY(-10px);}
+		.s3{ fill: #5c8d96;transform:translateY(-30px);}
+		.s4{ fill: #5c8d96;transform:translateY(-160px);}
+		.s5{ fill: #5c8d96;transform:translateY(-360px);}
+		.s6{ fill: #5c8d96;transform:translateY(-160px);}
+		.s7{ fill: #5c8d96;transform:translateY(-560px);}
+		.s8{ fill: #5c8d96;transform:translateY(-260px);}
+		.s9{ fill: #5c8d96;transform:translateY(-160px);}
+		.s10{ fill: #5c8d96;transform:translateY(-60px);}
+		.s11{ fill: #5c8d96;transform:translateY(-160px);}
+		.s12{ fill: #5c8d96;transform:translateY(-260px);}
+		.s13{ fill: #5c8d96;transform:translateY(-160px);}
+		.s14{ fill: #5c8d96;transform:translateY(-560px);}
+		.s15{ fill: #5c8d96;transform:translateY(-260px);}
+		.s16{ fill: #5c8d96;transform:translateY(-360px);}
+		.s17{ fill: #5c8d96;transform:translateY(-260px);}
+		.s18{ fill: #5c8d96;transform:translateY(-560px);}
+		.s19{ fill: #5c8d96;transform:translateY(-160px);}
+		.s20{ fill: #5c8d96;transform:translateY(-60px);}
+		 
+		
+		
+        [class*="pozitie-"]{background-blend-mode:normal;}
+
+		
+		
+	</style>
+	<path class="s1 pozitie-1" d="M21 276L35 276L35 290L21 290L21 276Z" />
+	<path class="s2 pozitie-3" d="M45 276L59 276L59 290L45 290L45 276Z" />
+	<path class="s3 pozitie-5" d="M68 276L82 276L82 290L68 290L68 276Z" />
+	<path class="s4 pozitie-8" d="M91 276L105 276L105 290L91 290L91 276Z" />
+	<path class="s5 pozitie-9"  d="M114 276L128 276L128 290L114 290L114 276Z" />
+	<path class="s6 pozitie-5" d="M137 276L151 276L151 290L137 290L137 276Z" />
+	<path class="s7 pozitie-4" d="M160 276L174 276L174 290L160 290L160 276Z" />
+	<path class="s8 pozitie-6" d="M184 276L198 276L198 290L184 290L184 276Z" />
+	<path class="s9 pozitie-8" d="M207 276L221 276L221 290L207 290L207 276Z" />
+	<path class="s10 pozitie-10" d="M230 276L244 276L244 290L230 290L230 276Z" />
+	<path class="s11 pozitie-9" d="M253 276L267 276L267 290L253 290L253 276Z" />
+	<path class="s12 pozitie-8" d="M276 276L290 276L290 290L276 290L276 276Z" />
+	<path class="s13 pozitie-7" d="M299 276L313 276L313 290L299 290L299 276Z" />
+	<path class="s14 pozitie-6" d="M322 276L336 276L336 290L322 290L322 276Z" />
+	<path class="s15 pozitie-5" d="M345 276L359 276L359 290L345 290L345 276Z" />
+	<path class="s16 pozitie-4" d="M369 276L383 276L383 290L369 290L369 276Z" />
+	<path class="s17 pozitie-3" d="M392 276L406 276L406 290L392 290L392 276Z" />
+	<path class="s18 pozitie-2" d="M415 276L429 276L429 290L415 290L415 276Z" />
+	<path class="s19 pozitie-1" d="M438 276L452 276L452 290L438 290L438 276Z" />
+	<path class="s20 pozitie-3" d="M461 276L475 276L475 290L461 290L461 276Z" />
+</svg>

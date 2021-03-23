@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Template - Marketerbay.Com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);}::-webkit-scrollbar-thumb{background:#09C;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5)}::-webkit-scrollbar-thumb:window-inactive{background:#222;border:1px solid #777}
+html{scroll-behavior: smooth;}
+body{width:100%;margin:0 auto;background: linear-gradient(45deg, #233C56 1.25%, #0D1B1E 1.25%, #0D1B1E 48.75%, #233C56 48.75%, #233C56 51.25%, #0D1B1E 51.25%, #0D1B1E 98.75%, #233C56 98.75%);background-size: 5px 5px;background-position: 50px 50px;}
+* {box-sizing: border-box;}
+
+.tleft{text-align:left;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+
+.header{display:block;width:100%;height:auto;margin:0 auto -7% auto;text-align:center;padding:3em 0em 21em;background-color:#099;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADAgMAAAArRl0sAAAAAXNSR0IB2cksfwAAAAlQTFRF////AAAAAAAAflGpXQAAAAN0Uk5TAKEATWpJdgAAAA5JREFUeJxjYGGQYMgAAADKAIUNkoRaAAAAAElFTkSuQmCC"),url('assets/marketerbay-cover-overlay-gamer369.jpg');background-repeat:repeat,no-repeat;background-size:auto,cover;background-position:0 0,center;background-attachment:fixed;}
+ .secondeffect{background-blend-mode:overlay;background-color:rgba(0,0,0,.5);}
+  
+.header h2{display:block;width:90%;height:auto;margin:0 auto;font-size: 7vw;font-weight:600;color:rgba(255,255,255,0.90);line-height:200px;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;padding:1em .3em 2em;text-transform:uppercase;text-shadow:0 1px 0px #000;}
+.header h2 span.helmet{display:block;width:250px;height:250px;text-align:center;margin:0 auto;margin-bottom:-40px;padding:.3em;border-radius:100% 100% 100% 100%;background: rgb(39,39,39);
+background: -moz-radial-gradient(circle, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+background: radial-gradient(circle, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#222222",GradientType=1);border:5px solid #3CC;}
+span.helmet .heliop{width:100%;height:100%;transform:translate(0%,0%);}
+.header h2 p{display:block;text-align:center;margin-bottom:-100px;font-size:1.6vw;font-weight:100;}
+.header h2 p sup.smaller{font-size:15px;padding:0 .6em 0;text-align:center;background-color:#09C;color:#fff;text-shadow:0 -1px 1px #000;border-radius:4px;}
+
+
+.mknav{position:absolute;top:0;left:0;background-color: #222;text-align:center;overflow:hidden;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size:1.3vw;font-weight:100;color:#3CC;text-shadow:0 1px 1px #000;text-transform:uppercase;}
+/*** Nav Icons ***/
+.svg-icon-nav {width: 2em;height: 2em;margin:7px 3px 6px 3px;}
+.svg-icon-nav path,
+.svg-icon-nav polygon,
+.svg-icon-nav rect {fill: #fff;}
+.svg-icon-nav circle {stroke: #fff;stroke-width: 1;}
+.mknav a:link,.mknav a:visited{margin:0 auto;padding:.6em;text-decoration:none;opacity:.6;color:#3CC;}
+.mknav a:hover {padding:.6em;text-decoration:none;opacity:1;}
+.mknav a:hover .svg-icon-nav path,
+.mknav a:hover .svg-icon-nav polygon,
+.mknav a:hover .svg-icon-nav rect {fill: #3CC;}
+.mknav a:hover .svg-icon-nav circle {stroke: #3CC;stroke-width: 1;}
+
+
+.boxing{margin:-20% auto -28% auto;padding:1em 0em 1em;text-align:center;}
+.inboxing{padding:1em 0em 1em;background-color:rgba(0,0,0,.7);box-shadow:0 0 1px #0FF, 0 1px 3px -2px #0FF;font-weight:500;color:#0CC;font-size:2vw;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;line-height:125px;margin-bottom:-13%;}
+#container{display:block;width:90%;height:auto;margin:-10% auto 6% auto;background-color:#222;font-size: calc(14px + 4 * ((100vw - 320px) / 680));font-weight:100;color:#ccc;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;box-shadow:0 7px 70px #000;border-radius:8px 8px 0 0;}
+
+section{margin:15px auto 16px auto;}
+.mkinfo{border:1px solid #0CC;padding:.7em .5em .7em;}
+.mkinfo h3{display:block;width:98%;height:auto;margin:0 auto;font-weight:500;}
+.mkinfo p{display:block;width:100%;height:auto;margin:0 auto;font-weight:100;}
+
+/*** SVG ***/
+.svg-icon-file {width: 1.5em;height: 1.5em;margin-left:-11px;margin-right:12px;transform:translateY(8px);opacity:1;}
+
+.footer{display:block;width:100%;height:auto;margin:30px auto 0px auto;background-color:#111;color:#666;float:none;clear:left;}
+
+
+.inner{display:block;width:90%;height:auto;margin:0 auto;float:none;clear:left;padding:.3em;}
+.inner h2{font-size: calc(20px + 6 * ((100vw - 320px) / 680));font-weight:400;color:#0CC;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;text-transform:uppercase;}
+
+/*** Footer ***/
+.footer{font-size: calc(12px + 3 * ((100vw - 320px) / 680));font-weight:100;color:#777;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+.footer .box-1{display:block;width:10%;float:left;text-align:center;}
+.footer .box-2{display:block;width:60%;float:left;}
+.footer .box-3{display:block;width:30%;float:left;text-align:right;}
+.boxed{display:block;width:90%;height:auto;margin:0 auto;padding:1em;}
+.footer .boxed a:link,.footer .boxed a:visited{color:#C0C0C0;text-decoration:none;}
+.footer .boxed a:hover{color:#09C;text-decoration:none;}
+
+.svg-icon-up {width: 1.8em;height: 1.8em;transform:translateY(15px);}
+.svg-icon-up path,
+.svg-icon-up polygon,
+.svg-icon-up rect {fill: #f1f1f1;}
+.svg-icon-up circle {stroke: #f1f1f1;stroke-width: 1;}
+.box-1 a svg{opacity:.3;}
+.box-1 a:hover svg{fill: #00CCCC;stroke: #00CCCC;stroke-width: 1;opacity:1;filter:drop-shadow(0 0 0.75rem #0CF)}
+
+
+
+.svg-icon-fooicons {width: 1.8em;height: 1.8em;margin-right:.5em;}
+.svg-icon-fooicons  path,
+.svg-icon-fooicons  polygon,
+.svg-icon-fooicons  rect {fill: #00CCCC;}
+.svg-icon-fooicons  circle {stroke: #00CCCC;stroke-width: 1;}
+
+.socials a:link .svg-icon-fooicons, .socials a:visited .svg-icon-fooicons{filter:grayscale(100%);}
+.socials a:hover .svg-icon-fooicons{filter:grayscale(0%) drop-shadow(0 0 0.75rem #0CF);}
+
+.credits{display:block;width:100%;height:auto;margin:10px auto;padding:.2em 0em .2em;text-align:right;border-top:1px solid #333;box-shadow:0 -1px 3px #111;float:none;clear:left;}
+.credits p{display:block;width:90%;height:auto;margin:0 auto;text-align:right;font-size:11px;}
+.credits a:link,.credits a:visited{color:#777;text-decoration:none;text-transform:uppercase;text-shadow:0 -1px 1px #111;}
+.credits a:hover{color:#09C;text-decoration:none;}
+
+/*** Legal Stuff **/
+.tab #disclaimer, .tab #tos{display:none;width:100%;height:100vh;background-color:rgba(0,0,0,0.90);position:fixed;top:0;left:0;transition:all 2s;}
+.tab #disclaimer:target, .tab #tos:target{display:block;width:100%;height:100vh;background-color:rgba(0,0,0,0.90);position:fixed;top:0;left:0;transition:all 2s;}
+
+.disclaimer-content,.tos-content{display:block;width:80%;height:auto;margin:20px auto 12px auto;padding:0em 0em 2em;background-color:#fff;font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#555;}
+.close{display:block;width:100%;height:auto;margin:0 auto;text-align:right;}
+.svg-icon-close{width: 1.8em;height: 1.8em;transform:translateY(0);background-color:#39C;}
+.svg-icon-close path,
+.svg-icon-close polygon,
+.svg-icon-close rect {fill: #f1f1f1;}
+.svg-icon-close circle {stroke: #f1f1f1;stroke-width: 1;}
+
+.marketerbay-eye{transform:translate(-3px, 7px);width:1.5em;height:1.5em;filter:grayscale(100%) brightness(100%);}
+.support a:hover .marketerbay-eye{filter:grayscale(0%) brightness(110%);}
+
+a:link, a:visited{color:#F63;text-decoration:none;}
+a:hover{color:#099;text-decoration:underline;}
+p{line-height:normal;display:block;margin:0 auto;}
+
+
+
+
+
+/****  Banner ***/
+.subscribetonewsletter{display:block;width:100%;height:auto;margin:10px auto 12px auto;text-align:center;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+.subscribetonewsletter svg{width:100%;height:auto;margin:0 auto;}
+
+tspan { white-space:pre }
+		.sbscr-bg { fill: #2d3133 } 
+		.subscr-red { fill: #f2374d } 
+		.subscr-button { fill: url(#grd1) } 
+		a:hover .subscr-button { fill: url(#grd2); }
+		.text-button { font-size: 14px;fill: #f2374d;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;text-anchor: middle ;text-decoration:none;} 
+		a:hover .text-button{font-size: 14px;fill: #ffffff;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;text-anchor: middle ;text-decoration:none;}
+		.txt4 { font-size: 24px;fill: #f4f4f4;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size:1.7vw;font-weight:500;text-shadow:0 1px 1px #000; } 
+
+
+#pop-subscribe{display:block;width:100%;height:100vh;position:fixed;top:0;left:-100%;margin:0 auto;background-color:rgba(0,0,0,.80);transition: ease-in-out 3s;}
+#pop-subscribe:target{display:block;width:100%;height:100vh;position:fixed;top:0;left:0;margin:0 auto;background-color:rgba(0,0,0,.80);z-index:9999;}
+
+
+
+#main-subscribe{display:block;width:70%;height:auto;margin:3% auto 3.5% auto;background-color:#fff;border-radius:30px;box-shadow:0 0 50px #999;padding:1em;font-weight:100;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size:1.3vw;}
+.rtitle{display:block;width:80%;height:auto;text-align:center;margin:10px auto 12px auto;}
+svg.thelogo{fill: #F36;width:10vw;height:auto;margin:20px auto 12px auto;}
+#revue-form{display:block;width:90%;height:auto;margin:20px auto 12px auto;padding:.3em;font-weight:400;}
+.revue-form-group label{display:block;width:40%;}
+.revue-form-group input{display:block;width:50%;float:left;}
+.revue-form-group{display:block;width:90%;height:auto;margin:10px auto 12px auto;float:none;clear:left;padding:.3em;}
+.revue-form-field{padding:.3em .5em .3em;font-size:1vw;}
+.revue-form-footer{display:block;width:80%;height:auto;margin:20px auto 12px auto;text-align:center;font-size:14px;}
+.revue-form-actions{display:block;width:80%;height:auto;margin:20px auto 12px auto;text-align:left;float:none;clear:left;padding:2em .3em .3em;}
+input[type="submit"]{padding:1em 2.7em 1em;background-color:#F36;color:#fff;border-radius:35px;text-align:center; outline:none;border:0;font-size:1vw;cursor:pointer;box-shadow:0 0px 11px #999;}
+input[type="submit"]:hover,input[type="submit"]:focus{padding:1em 2.7em 1em;background-color:#F03;color:#fff;border-radius:35px;text-align:center; outline:none;border:0;font-size:1vw;box-shadow:0 0px 5px #999;}
+
+.screenshot{display:block;width:100%;height:auto;margin:0 auto 22px auto;text-align:center;}
+.screenshot img{display:block;width:100%;height:auto;margin:0 auto;}
+.col-1 {width: 8.33%;}.col-2 {width: 16.66%;}.col-3 {width: 25%;}.col-4 {width: 33.33%;}.col-5 {width: 41.66%;}.col-5-half {width: 47.66%;}.col-6 {width: 50%;}.col-7 {width: 58.33%;}.col-8 {width: 66.66%;}.col-9 {width: 75%;}.col-10 {width: 83.33%;}.col-11 {width: 91.66%;}.col-12 {width: 100%;}[class*="col-"] {float: left;padding: 15px;border: 0px solid #ccc;}[class*="no"] {float: left;padding: 0;}[class*="padd20"]{display:block;padding:20px;}.row:after {content: "";clear: both;display: inline-table;}
+
+*{text-decoration:none;}
+</style>
+</head>
+
+<body>
+
+
+
+
+<div class="header secondeffect">
+
+<div class="col-12 no mknav">
+  <div class="row">
+   <div class="col-3 no tleft"><a href="../../../index.html"><svg class="svg-icon-nav" viewBox="0 0 20 20">
+							<path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
+						</svg></a></div>
+   <div class="col-6">Open Source - <a href="https://marketerbay.com" target="_blank">MarketerBay.com</a> Project</div>
+   <div class="col-3 no tright"><a href="https://github.com/mkbres/overlays/discussions" target="_blank"><svg class="svg-icon-nav" viewBox="0 0 20 20">
+							<path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
+						</svg></a></div>
+  </div>
+</div>
+
+
+<h2><span class="helmet"><img class="heliop" src="overlay/images/changeavatar.svg"/></span>
+GAMER 369
+<p> OBS overlay <sup class="smaller">BETA</sup> </p>
+</h2></div>
+
+   <div class="col-12 no boxing">
+      <div class="row">
+      
+        <div class="col-4">
+          <div class="col-12 inboxing">EDITABLE</div>
+        </div>
+        
+        <div class="col-4">
+         <div class="col-12 inboxing">INTERACTIBLE</div>
+        </div>
+        
+        <div class="col-4">
+         <div class="col-12 inboxing">BROWSER BASED</div>
+        </div>
+        
+        
+      </div>
+   </div>
+
+
+   <div id="container">
+   
+   
+     
+     
+     <div class="screenshot">
+       
+     </div>
+     
+     <div class="inner">
+       <h2>Gamer 369 - Go for Info</h2>
+  
+  <section class="mkinfo">
+   <h3>About</h3>
+   <p>Gamer 369 is an open source project for OBS and intended purpose is to be used as full screen overlay</p>
+   <p>Interested in knowing a little bit more about this project? Scroll down then.</p>
+  </section>
+  
+ 
+ 
+ <section>
+<h3>How it works and what features are available within this overlay?</h3>
+<p>It a browser based source file which can be added in OBS software to display a bunch of stuff.</p>
+<p>Let's take each section and see what this amazing project can do 😎</p>
+<p><strong>1. Header section</strong></p>
+<p>- avatar image in the left side which can be changed via Interact OBS interface. Supported file types? SVG, GIF, PNG, JPEG</p>
+<p>- user name is also editable via Interact OBS interface. Simply type in your text</p>
+<p><strong>2. Side Menu</strong></p>
+<p>- shows 4 buttons triggering additional sections. Games, Stats, Team, Social</p>
+<p><strong>2.1 Games</strong></p>
+<p> Once triggered from side menu a custom section show up displaying 8 "slots" with changeable image and editable text visually defied by Game Name here</p>
+<p> Animated by CSS. Upon hover of Games box, the perspective and position of the box changes. To close this box, click on X button or simply navigate to other tab from Side Menu</p>
+<p><strong>2.2 Stats</strong></p>
+<p> visibility triggered from Side Menu and will display 2 icons (non editable/can't be changed via OBS interface) and 6 editable Achievements slots with editable hours</p>
+<p>To close this box simply click on X or trigger another box from Side Menu</p>
+<p><strong>2.3 Team</strong></p>
+<p>Shows editable text-based content and 3 generic images which can be changed. Simply click on top of the image to swap it with yours. SVG, GIF, PNG, JPEG file types supported. Default are using SVGs.</p>
+<p><strong>2.4 Social</strong></p>
+<p>by now you've already figured out, it is triggered by the Side Menu link and shows a box with a bunch of SVG icons and editable text. 9 icons can be hidden or not if click on (X) icon from left side of the slots</p>
+<p><strong>3. Bottom Bar</strong></p>
+<p>3.1 - from left to right, 2 arrow icons used to change between to backgrounds</p>
+<p>3.2 - type field. Looks like a message box and can hold your own (short text)</p>
+<p>3.3 - clock. Shows your local time. Can't be edited</p>
+<p>3.4 - on click of eye icon, the Side Menu visibility is set to on/off</p>
+<p>3.5 - panel icon is triggering visibility for the Away Screen (on/off)</p>
+<p><strong>4. Away Screen</strong></p>
+<p>4.1 - left editable box . Type to change text</p>
+<p>4.2 - right box is showing (by default) an image which can be changed</p>
+<p>4.3 - below right box there's a toggle icon. On click display or hide clock</p>
+</section>
+ 
+ <section>
+ <p>The original version had more animations to show off but I had to optimize as much as possible these SVG animations because they were using CSS instead of <mark>repeatCount="indefinite"</mark> . One optimization solved.</p>
+ <p>This overlay is also using javascript in the same HTML page. Used to allow image change, trigger buttons show/hide elements. Unfortunately I'm not a programmer so this programming language is something I can't optimize, but feel free to give it a try</p>
+ </section>
+ 
+  
+  
+  <section>
+<h3>Install Instructions</h3>
+<p>1. For downloaded version</p>
+<ol>
+<li>Open OBS, click the + button/icon from Sources manager window</li>
+<li>Select the Browser option from the available options panel</li>
+<li>Select Local file checkbox , browse button and select the html file provided</li>
+<li>Set up the width and height of the overlay (it depends on what the overlay is showing)</li>
+<li>Select the Refresh checkbox</li>
+<li>Tweak the position of the installed overlay by dragging the red lines or corners</li>
+<li>To trigger overlay visibility use the eye icon to show or hide</li>
+</ol>
+<p>1.2 Simplified install:</p>
+<p>Simply drag and drop the html file into Preview window inside OBS</p>
+<p>2. Hosted version:</p>
+<ol>
+<li>Open OBS, click the + button/icon from Sources manager window</li>
+<li>Select the Browser option from the available options panel</li>
+<li>Go to online (hosted) version showing this overlay and copy the full URL path</li>
+<li>Paste the URL in related field on OBS and click Apply.</li>
+<li>To trigger overlay visibility use the eye icon to show or hide</li>
+</ol>
+</section>
+  
+  
+
+
+
+
+<section>
+<p><strong>How to use</strong></p>
+<p>Almost all text-based elements are editable via Interact OBS functionality</p>
+<p>In Interact window click and type to interact with on-window elements</p>
+<p>All editing is done in real time and it will render in live stream</p>
+<p>Upon refresh of the browser source all editing will revert back to default</p>
+<p>This overlay is not automatically triggered by external event or action</p>
+</section>
+
+
+<p><em>Also compatible with SplitCam Software but without Interact functionality, currently not supported by SplitCam</em></p>
+
+<section>
+<p id="resources"><strong>Links:</strong></p>
+<p>Go for image editing using PSD source file or simply use the graphics provided with this download.</p>
+<ul>
+<li><a href="overlay/obs-overlay.html" target="_blank">Gamer 369</a></li>
+<li><a href="overlay/obs-overlay-offscreen.html" target="_blank">bonus / off screen</a></li>
+<li><a href="https://marketerbay.com/forums/topic/general-install-obs-overlays/" target="_blank">general install OBS overlays</a></li>
+</ul>
+</section>
+
+<p><em>Concept and design by Dan N from Marketerbay.com</em></p>
+
+<div class="subscribetonewsletter">
+  
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" width="1000" height="100">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="840.502" y1="73.875" x2="840.502" y2="26.125">
+			<stop offset="0" stop-color="#d7d7d6"  />
+			<stop offset="1" stop-color="#ffffff"  />
+		</linearGradient>
+		
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="840.502" y1="73.875" x2="840.502" y2="26.125">
+			<stop offset="0" stop-color="#000000"  />
+			<stop offset="1" stop-color="#f2374d"  />
+		</linearGradient>
+		
+	</defs>
+	<path class="sbscr-bg" d="M0 0L1000 0L1000 100L0 100L0 0Z" />
+	<path class="subscr-red"  d="M-0.41 0.25L681.89 0.25L640.52 99.57L-0.41 100.25L-0.41 0.25Z" />
+	<a href="#pop-subscribe"><path class="subscr-button" d="M757.35 26.12L923.66 26.12C936.84 26.12 947.53 36.81 947.53 50C947.53 63.19 936.84 73.87 923.66 73.87L757.35 73.87C744.16 73.87 733.47 63.19 733.47 50C733.47 36.81 744.16 26.12 757.35 26.12Z" />
+	<text id="clickit" style="transform: matrix(1,0,0,1,839.818,55.342)" >
+		<tspan x="0" y="0" class="text-button">CLICK TO SUBSCRIBE</tspan>
+	</text></a>
+	<text id="text-large" style="transform: matrix(1,0,0,1,19.6,45.081)" >
+		<tspan x="0" y="0" class="txt4">Did you know that we add free and exclusive</tspan>
+		<tspan x="0" y="26.88" class="txt4">downloads from time to time? Subscribe  NOW!</tspan>
+	</text>
+</svg>
+
+
+</div>
+
+     </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <div class="footer">
+<div class="clearfix"></div>
+   <div class="row">
+   
+     <div class="box-1">
+       <a href="#" target="_top"><svg class="svg-icon-up" viewBox="0 0 20 20">
+							<path d="M13.889,11.611c-0.17,0.17-0.443,0.17-0.612,0l-3.189-3.187l-3.363,3.36c-0.171,0.171-0.441,0.171-0.612,0c-0.172-0.169-0.172-0.443,0-0.611l3.667-3.669c0.17-0.17,0.445-0.172,0.614,0l3.496,3.493C14.058,11.167,14.061,11.443,13.889,11.611 M18.25,10c0,4.558-3.693,8.25-8.25,8.25c-4.557,0-8.25-3.692-8.25-8.25c0-4.557,3.693-8.25,8.25-8.25C14.557,1.75,18.25,5.443,18.25,10 M17.383,10c0-4.07-3.312-7.382-7.383-7.382S2.618,5.93,2.618,10S5.93,17.381,10,17.381S17.383,14.07,17.383,10"></path>
+						</svg></a>
+     </div>
+     
+     
+     
+     
+     
+     
+     
+     <div class="box-2">
+       <div class="boxed">
+         <div class="support"><a href="https://marketerbay.com/premium-assistance/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 36" width="44" height="36" class="marketerbay-eye">
+	<defs>
+		<image width="44" height="36" id="img1" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="eye" href="#img1" x="0" y="0" />
+</svg> Need assistance? Check out our premium Assistance service</a></div>
+       </div>
+     </div>
+     
+     
+     
+     
+     
+     
+     
+     <div class="box-3">
+       <div class="boxed">
+         <div class="socials">
+           <a href="https://twitter.com/MarketerBay_Com" target="_blank" title="Follow us on Twitter"><svg class="svg-icon-fooicons" viewBox="0 0 20 20">
+							<path fill="none" d="M14.467,6.707c-0.34,0.198-0.715,0.342-1.115,0.419c-0.318-0.335-0.775-0.545-1.279-0.545c-0.969,0-1.754,0.773-1.754,1.727c0,0.135,0.015,0.267,0.045,0.394C8.905,8.628,7.612,7.94,6.747,6.896C6.596,7.151,6.509,7.448,6.509,7.764c0,0.599,0.31,1.128,0.78,1.438C7.002,9.192,6.732,9.115,6.495,8.985c0,0.007,0,0.014,0,0.021c0,0.837,0.605,1.535,1.408,1.694c-0.147,0.04-0.302,0.06-0.462,0.06c-0.113,0-0.223-0.011-0.33-0.031c0.223,0.687,0.871,1.186,1.638,1.199c-0.6,0.464-1.356,0.739-2.179,0.739c-0.142,0-0.281-0.007-0.418-0.023c0.777,0.489,1.699,0.775,2.689,0.775c3.228,0,4.991-2.63,4.991-4.913c0-0.075-0.002-0.149-0.004-0.223c0.342-0.244,0.639-0.547,0.875-0.894c-0.316,0.137-0.652,0.23-1.008,0.272C14.057,7.448,14.336,7.11,14.467,6.707 M10,0.594c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.196,0,9.407-4.211,9.407-9.406C19.406,4.805,15.195,0.594,10,0.594 M10,18.552c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.449,10,1.449c4.723,0,8.551,3.829,8.551,8.551S14.723,18.552,10,18.552"></path>
+						</svg></a>
+           <a href="https://www.youtube.com/channel/UCkqHQyckVX3d_7blCFrJfCA" target="_blank" title="Follow our YouTubeChannel"><svg class="svg-icon-fooicons" viewBox="0 0 20 20">
+							<path fill="none" d="M9.62,8.236h0.179c0.396,0,0.716-0.318,0.716-0.711V6.368c0-0.393-0.32-0.711-0.716-0.711H9.62c-0.396,0-0.716,0.318-0.716,0.711v1.157C8.904,7.917,9.224,8.236,9.62,8.236 M9.44,6.324c0-0.147,0.121-0.267,0.269-0.267c0.148,0,0.269,0.12,0.269,0.267v1.245c0,0.147-0.12,0.267-0.269,0.267c-0.148,0-0.269-0.12-0.269-0.267V6.324z M11.41,8.236c0.357,0,0.671-0.312,0.671-0.312v0.267h0.537V5.657h-0.537v1.957c0,0-0.18,0.222-0.358,0.222c-0.18,0-0.18-0.134-0.18-0.134V5.657h-0.536V7.88C11.007,7.88,11.052,8.236,11.41,8.236 M7.517,8.191h0.626V6.812l0.716-1.957H8.277L7.83,6.146l-0.447-1.29H6.756l0.76,1.957V8.191z M11.052,11.139c-0.116,0-0.207,0.068-0.269,0.135v1.794c0.057,0.061,0.141,0.119,0.269,0.119c0.269,0,0.269-0.299,0.269-0.299v-1.451C11.32,11.437,11.275,11.139,11.052,11.139 M10,0.469c-5.264,0-9.531,4.267-9.531,9.531c0,5.264,4.267,9.531,9.531,9.531c5.264,0,9.531-4.268,9.531-9.531C19.531,4.736,15.264,0.469,10,0.469 M10,18.665c-4.786,0-8.665-3.879-8.665-8.665c0-4.785,3.879-8.665,8.665-8.665c4.786,0,8.665,3.88,8.665,8.665C18.665,14.786,14.786,18.665,10,18.665 M13.289,8.792c0,0-1.642-0.085-3.289-0.085c-1.642,0-3.289,0.085-3.289,0.085c-0.742,0-1.343,0.573-1.343,1.28c0,0-0.134,0.831-0.134,1.664c0,0.831,0.134,1.664,0.134,1.664c0,0.708,0.601,1.28,1.343,1.28c0,0,1.616,0.086,3.289,0.086c1.615,0,3.289-0.086,3.289-0.086c0.741,0,1.343-0.572,1.343-1.28c0,0,0.134-0.84,0.134-1.664c0-0.84-0.134-1.664-0.134-1.664C14.632,9.365,14.03,8.792,13.289,8.792 M8.054,10.242H7.382v3.372H6.756v-3.372H6.084V9.688h1.969V10.242z M9.754,13.614H9.217v-0.257c0,0-0.313,0.299-0.671,0.299c-0.357,0-0.402-0.342-0.402-0.342v-2.646H8.68v2.475c0,0,0,0.129,0.179,0.129c0.179,0,0.358-0.214,0.358-0.214v-2.39h0.537V13.614z M11.856,12.974c0,0,0,0.683-0.491,0.683c-0.302,0-0.485-0.16-0.583-0.283v0.241h-0.581V9.688h0.581v1.273c0.089-0.094,0.308-0.292,0.583-0.292c0.357,0,0.491,0.298,0.491,0.683V12.974z M13.96,11.395v0.854h-1.118v0.64c0,0,0,0.299,0.268,0.299c0.27,0,0.27-0.299,0.27-0.299v-0.299h0.581v0.47c0,0-0.09,0.598-0.805,0.598c-0.717,0-0.851-0.598-0.851-0.598v-1.664c0,0,0-0.726,0.851-0.726C14.005,10.669,13.96,11.395,13.96,11.395 M13.109,11.139c-0.268,0-0.268,0.298-0.268,0.298v0.384h0.537v-0.384C13.379,11.437,13.379,11.139,13.109,11.139"></path>
+						</svg></a>
+           <a href="https://www.instagram.com/marketerbay_com/" target="_blank" title="Follow us on Instagram"><svg class="svg-icon-fooicons" viewBox="0 0 20 20">
+							<path fill="none" d="M9.969,0.594c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.375,4.805,15.164,0.594,9.969,0.594 M9.969,18.552c-4.723,0-8.551-3.829-8.551-8.552s3.829-8.551,8.551-8.551S18.521,5.277,18.521,10S14.691,18.552,9.969,18.552 M12.534,5.724H7.403c-0.944,0-1.71,0.766-1.71,1.71v5.131c0,0.944,0.766,1.71,1.71,1.71h5.131c0.944,0,1.71-0.766,1.71-1.71V7.435C14.244,6.49,13.479,5.724,12.534,5.724M11.679,7.007h1.283V8.29h-1.283V7.007z M9.969,8.29c0.944,0,1.71,0.766,1.71,1.71s-0.766,1.71-1.71,1.71s-1.71-0.766-1.71-1.71S9.024,8.29,9.969,8.29 M13.39,12.565c0,0.472-0.384,0.854-0.855,0.854H7.403c-0.472,0-0.855-0.383-0.855-0.854V9.573h0.898C7.423,9.712,7.403,9.854,7.403,10c0,1.417,1.149,2.565,2.565,2.565c1.416,0,2.565-1.148,2.565-2.565c0-0.146-0.02-0.288-0.043-0.427h0.898V12.565z"></path>
+						</svg></a>
+                        <a href="https://www.getrevue.co/profile/camgirlcloud" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve" class="svg-icon-fooicons">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg></a>
+         </div>
+       </div>
+     </div>
+     
+ <div class="credits">
+   <p><a href="#disclaimer">Disclaimer</a> / <a href="#tos">Terms of Service</a></p>
+ </div>    
+     
+     
+   </div>
+</div>
+   
+   
+   </div>
+   
+
+
+   <div class="tab">
+   
+   
+   
+        <div id="disclaimer">
+          <div class="disclaimer-content">
+             <div class="close"><a href="#!" target="_self"><svg class="svg-icon-close" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+						</svg></a></div>
+                  <div class="boxed">
+                      <h3>Disclaimer</h3>
+                      <p>The information contained in our website is for general information purposes only. The information is provided by MarketerBay.com and while we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+<p>In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+<p>Through this website you are able to link to other websites which are not under the control of MarketerBay.com . We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+<p>Every effort is made to keep the website up and running smoothly. However, MarketerBay.com takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+                   </div>
+          </div>
+        </div>
+        
+        
+        
+        <div id="tos">
+          <div class="tos-content">
+             <div class="close"><a href="#!" target="_self"><svg class="svg-icon-close" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+						</svg></a></div>
+                  <div class="boxed">
+                      <h3>Terms of Service</h3>
+                      <p>Please review the <a href="https://marketerbay.com/terms/" target="_blank">Terms of Service</a> on main website</p>
+                      <p>These terms are subject to change and update based on current legislations</p>
+                   </div>      
+          </div>
+        </div>
+        
+        
+        
+  
+  
+  
+  
+  
+  
+  <div id="pop-subscribe">
+  
+  
+      <div id="main-subscribe">
+<div class="rtitle">
+<a href="https://www.getrevue.co/profile/camgirlcloud" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve" class="thelogo">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg></a>
+</div>
+
+<div id="revue-embed">
+  <form action="https://www.getrevue.co/profile/camgirlcloud/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+  <div class="revue-form-group">
+    <label for="member_email">Email address</label>
+    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
+  </div>
+  <div class="revue-form-group">
+    <label for="member_first_name">First name <span class="optional">(Optional)</span></label>
+    <input class="revue-form-field" placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name">
+  </div>
+  <div class="revue-form-group">
+    <label for="member_last_name">Last name <span class="optional">(Optional)</span></label>
+    <input class="revue-form-field" placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name">
+  </div>
+  <div class="revue-form-actions">
+    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+  </div>
+  <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+  </form>
+</div>
+<p style="text-align:center;">This subscription is optional but we do add free stuff on MarketerBay and we don't make a big fuss about it so yup, you might want to get notified before everybody else. To close this window <a href="#resources">click here</a></p>
+</div>
+  
+  </div>
+  
+  
+    
+    
+    
+    
+        
+        
+   </div>
+
+
+</body>
+</html>

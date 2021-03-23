@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 26" width="44" height="46" class="mkcursor">
+	<style>
+		tspan { white-space:pre }
+		.sideleft, .sideright { fill: #ffffff;filter:drop-shadow(0 1px 0px #000);animation: Opaq 1s infinite;} 
+		.incenteredmic { fill: #4691f6; filter:drop-shadow(0 1px 1px #4691f6);} 
+		.incenteredmare{fill: #4691f6; filter:drop-shadow(0 1px 1px #4691f6);}
+
+		#midsm{animation: PulseOne 1s infinite; filter:drop-shadow(1px 1px 1px #4691f6);transform:translate(0px,0px); }
+		#midbig{animation: PulseTwo 1s infinite; filter:drop-shadow(1px 1px 1px #4691f6);transform:translate(0px,0px); }
+		
+		@keyframes Opaq {
+		   0%{fill: #ffffff; filter:drop-shadow(0 1px 0px #000);}
+		   50%{fill: #4691f6; filter:drop-shadow(0 1px 2px #000);}
+		   100%{fill: #ffffff; filter:drop-shadow(0 1px 0px #000);}
+		}
+		
+		@keyframes PulseOne {
+		   0%{filter:drop-shadow(1px 1px 1px #4691f6);}
+		   50%{filter:drop-shadow(5px 5px 1px #4691f6);transform:translate(-2px,-3px);}
+		   100%{filter:drop-shadow(1px 1px 1px #4691f6);}
+		}
+		@keyframes PulseTwo {
+		   0%{filter:drop-shadow(1px 1px 1px #4691f6);}
+		   50%{filter:drop-shadow(5px 5px 1px #4691f6);transform:translate(-2px,-3px);}
+		   100%{filter:drop-shadow(1px 1px 1px #4691f6);}
+		}
+	</style>
+	<path id="vleft" class="sideleft" d="M0.67 0.84L5.62 25.32L9.14 18.19L7.38 14.92L5.95 16.77L4.95 13.08L6.62 11.4L5.28 8.55L3.86 9.72L3.19 6.79L4.09 5.85L0.67 0.84Z" />
+	<path id="vright" class="sideright" d="M1.19 0.86L24.02 10.99L16.3 12.88L13.49 10.46L15.6 9.46L12.22 7.68L10.22 8.96L7.72 7.03L9.18 5.89L6.46 4.6L5.34 5.28L1.19 0.86Z" />
+	<path id="midsm" class="incenteredmic" d="M2.71 7.33L5.97 4.74L8.56 5.91L3.44 9.89L2.71 7.33Z" />
+	<path id="midbig" class="incenteredmare" d="M6.31 12.68L10.47 9.4L13.8 10.11L7.26 15.17L6.31 12.68Z" />
+</svg>

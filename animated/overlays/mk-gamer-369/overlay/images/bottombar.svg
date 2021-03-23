@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 986 46" width="986" height="46" class="bottombar">
+	<style>
+	
+		tspan { white-space:pre }
+		.mbg { opacity: 0.702;fill: #000000 } 
+		.mksphera { opacity: 0.5;fill: #000000;} 
+		 .squareA { fill: #09C;opacity: .5; mix-blend-mode:overlay;}
+		 .squareB { fill: #09C;opacity: .6; mix-blend-mode:overlay;}
+		 .squareC { fill: #09C; opacity: .7;mix-blend-mode:overlay;}
+		 .squareD { fill: #09C;opacity: .8; mix-blend-mode:overlay;}
+		 .sline {opacity: 0.5; fill: #000000;} 
+		
+		
+		
+		
+	</style>
+	<path id="mkisbg" fill-rule="evenodd" class="mbg" d="M0.2 11.7L5.79 6.21L29.81 6.21L32.78 11.7L76.67 11.7L80.78 6.21L303.92 6.21L320.45 0.18L666.86 0.4L681.33 6.21L974.03 6.21L985.05 11.7L985.05 42.41L897.01 42.41L893.5 45.36L813.84 45.36L810.11 36.36L681.33 36.36L666.86 42.41L648.6 42.41L633.46 36.36L320.45 36.36L303.92 42.41L303.92 45.36L29.81 45.36L29.81 36.36L0.2 36.36L0.2 11.7ZM641.7 21.28C641.7 29.61 648.45 36.36 656.77 36.36C665.1 36.36 671.84 29.61 671.84 21.28C671.84 12.96 665.1 6.21 656.77 6.21C648.45 6.21 641.7 12.96 641.7 21.28Z" />
+	<path id="sqcir" class="mksphera" d="M657.05 10.45C663.45 10.45 668.65 15.64 668.65 22.05C668.65 28.45 663.45 33.65 657.05 33.65C650.64 33.65 645.45 28.45 645.45 22.05C645.45 15.64 650.64 10.45 657.05 10.45Z" />
+	<path id="sq1" class="squareA" d="M320.45 42.41L323.4 42.41L323.4 45.36L320.45 45.36L320.45 42.41Z" />
+	<path id="sq2" class="squareB" d="M326.45 42.41L329.4 42.41L329.4 45.36L326.45 45.36L326.45 42.41Z" />
+	<path id="sq3" class="squareC" d="M332.45 42.41L335.4 42.41L335.4 45.36L332.45 45.36L332.45 42.41Z" />
+	<path id="sq4" class="squareD" d="M338.45 42.41L341.4 42.41L341.4 45.36L338.45 45.36L338.45 42.41Z" />
+	<path id="ln1" class="sline" d="M681.33 42.41L744.97 42.41L744.97 45.36L681.33 45.36L681.33 42.41Z" />
+</svg>
