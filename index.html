@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - Overlays</title>
+<style>
+*{box-sizing:border-box;}
+.xcr::-webkit-scrollbar{width:8px}
+.xcr::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);-webkit-border-radius:10px;border-radius:10px}
+.xcr::-webkit-scrollbar-thumb{-webkit-border-radius:10px;border-radius:10px;background:#c6063c;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5)}
+.xcr::-webkit-scrollbar-thumb:window-inactive{background:rgba(204,0,0,.4);border:1px solid #ccc}
+html{scroll-behavior: smooth;}
+body{width:100%;margin:0 auto;font-size: calc(17px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;background-color:#1C373E;color:rgba(255,255,255,.7);}
+.kpd-1{width:8.33%}.kpd-2{width:16.66%}.kpd-3{width:25%}.kpd-4{width:33.33%}.kpd-5{width:41.66%}.kpd-5-half{width:47.66%}.kpd-6{width:50%}.kpd-7{width:58.33%}.kpd-8{width:66.66%}.kpd-9{width:75%}.kpd-10{width:83.33%}.kpd-11{width:91.66%}.kpd-12{width:100%}[class*="kpd-"]{float:left;padding:15px;border:0px solid #ccc}[class*="no"]{float:left;padding:0}[class*="padd20"]{display:block;padding:20px}.row:after{content:"";clear:both;display:inline-table}
+.hr{border:none;clear:both;height:1px;line-height:0;width:100%;font-size:0;padding:0;margin-bottom:20px;background:#f39;box-shadow:0 0px 3px #fff}
+.tleft{text-align:left}
+.tright{text-align:right}
+.tcenter{text-align:center}
+.tfleft{float:left}
+.tfright{float:right}
+.clearfix{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.dotted{border-bottom:1px dashed #0c3;border-left:0;border-right:0;margin-bottom:10px}
+
+.header{display:block;width:100%;text-align:center;margin:0 auto;}
+.header h1{font-size: calc(32px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:700;color:rgba(255,255,255,.7);text-shadow:0 1px 0 #000;text-transform:uppercase;}
+.container{display:block;width:90%;height:auto;margin:12px auto 0px auto;padding:2em .3em 2em;font-size: calc(14px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:100;color:rgba(255,255,255,.5);}
+
+.category{display:block;width:90%;height:auto;margin:0 auto;text-align:center;}
+
+
+
+
+.black{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(0,0,0,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#000000",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+.golden{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(241,223,129,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(241,223,129,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(241,223,129,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#f1df81",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+
+.purple{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(63,24,69,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(63,24,69,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(63,24,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#3f1845",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+.lightblue{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(66,136,136,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(66,136,136,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(66,136,136,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#428888",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+.orange{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(243,101,25,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(243,101,25,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(243,101,25,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#f36519",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+.green{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(190,224,60,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(190,224,60,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(190,224,60,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#bee03c",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+.pink{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(245,16,209,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(245,16,209,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(245,16,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#f510d1",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+.blue{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(16,124,245,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(16,124,245,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 27%, rgba(16,124,245,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#107cf5",GradientType=1);text-shadow:0 2px 2px #000;background-repeat:no-repeat;background-size:cover;background-position:-700px 0;transition: all .3s;}
+
+
+.golden:hover,
+.purple:hover,
+.lightblue:hover,
+.black:hover,
+.orange:hover,
+.green:hover,
+.pink:hover,
+.blue:hover{background-repeat:no-repeat;background-size:cover;background-position:0px 0;}
+
+
+
+
+.category a:link,
+.category a:visited{display:block;width:100%;height:auto;margin:0 auto;text-align:center;padding:.5em 0em .5em;text-decoration:none;color:#408080;font-size: calc(13px + 6 * ((100vw - 320px) / 680));font-weight:500;text-transform:uppercase;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;border:1px solid #A8D3D9;transition:all .3s;}
+.category a:hover{color:#ffffff;text-decoration:none;}
+
+.premium a:link,.premium a:visited{color:#FC3;text-decoration:none;border:1px solid #A8D3D9;}
+.premium a:hover{color:#fff;text-decoration:none;border:1px solid #FC3;}
+
+/*** Premium Icon ***/
+.svg-icon-premium {width: 1em;height: 1em;margin-right:5px; }
+.svg-icon-premium path,
+.svg-icon-premium polygon,
+.svg-icon-premium rect {fill: #FC3;}
+.svg-icon-premium circle {stroke: #FC3;stroke-width: 1;}
+svg.star{transform:rotateY(0deg);transform-origin:bottom center;animation: starspin 4s infinite;}
+
+
+
+@keyframes starspin{
+	0%{transform:rotateY(0deg);filter: drop-shadow(0 0 0.75rem crimson);}
+	50%{transform:rotateY(360deg);filter:drop-shadow(0px 1px 5px rgba(255,255,153,1));}
+	100%{transform:rotateY(0deg);filter: drop-shadow(0 0 0.75rem crimson);}
+	}
+
+@media only screen and (max-width: 1028px) and (min-width: 300px){
+	body{margin:0 auto;font-size: calc(14px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+	[class*="kpd-"]{width:100%}.header h1{font-size:17px;}
+</style>
+</head>
+
+<body>
+
+
+
+   <div class="header">
+     <h1>Overlays</h1>
+   </div>
+
+  <div class="container">
+   <div class="row">
+   
+    <div class="kpd-3">
+      <div class="category purple"><a href="top/">Top Overlays</a></div>
+    </div>
+    
+    <div class="kpd-3">
+     <div class="category lightblue"><a href="mid/">Mid Overlays</a></div>
+    </div>
+    
+    <div class="kpd-3">
+     <div class="category black"><a href="3rds/">Thirds Overlays</a></div>
+    </div>
+    
+    <div class="kpd-3">
+     <div class="category orange"><a href="bottom/">Bottom Overlays</a></div>
+    </div>
+    
+   </div>
+  </div>
+
+<div class="container">
+   <div class="row">
+   
+    <div class="kpd-6">
+      <div class="category green"><a href="animated/">Animated</a></div>
+    </div>
+    
+    <div class="kpd-6">
+     <div class="category pink"><a href="static/">Static</a></div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="container">
+   <div class="row">
+   
+    <div class="kpd-4">
+      <div class="category blue"><a href="info.html">Info</a></div>
+    </div>
+    
+    <div class="kpd-4">
+     <div class="category premium golden"><a href="https://marketerbay.com/product-category/overlays/obs-overlay/" target="_blank"><svg class="svg-icon-premium star" viewBox="0 0 20 20">
+							<path d="M17.684,7.925l-5.131-0.67L10.329,2.57c-0.131-0.275-0.527-0.275-0.658,0L7.447,7.255l-5.131,0.67C2.014,7.964,1.892,8.333,2.113,8.54l3.76,3.568L4.924,17.21c-0.056,0.297,0.261,0.525,0.533,0.379L10,15.109l4.543,2.479c0.273,0.153,0.587-0.089,0.533-0.379l-0.949-5.103l3.76-3.568C18.108,8.333,17.986,7.964,17.684,7.925 M13.481,11.723c-0.089,0.083-0.129,0.205-0.105,0.324l0.848,4.547l-4.047-2.208c-0.055-0.03-0.116-0.045-0.176-0.045s-0.122,0.015-0.176,0.045l-4.047,2.208l0.847-4.547c0.023-0.119-0.016-0.241-0.105-0.324L3.162,8.54L7.74,7.941c0.124-0.016,0.229-0.093,0.282-0.203L10,3.568l1.978,4.17c0.053,0.11,0.158,0.187,0.282,0.203l4.578,0.598L13.481,11.723z"></path>
+						</svg> Premium</a></div>
+    </div>
+    
+    <div class="kpd-4">
+     <div class="category blue"><a href="howto.html">How To...</a></div>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
