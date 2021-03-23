@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MK 3rd overlay - 03</title>
+<style>
+*{box-sizing:border-box;}
+body{margin:0 auto;width:100%;}
+.xcr::-webkit-scrollbar{width:8px}
+.xcr::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);}
+.xcr::-webkit-scrollbar-thumb{background:#0CF;-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,.5)}
+.xcr::-webkit-scrollbar-thumb:window-inactive{background:#0CF;}
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+.kpd-1{width:8.33%}.kpd-2{width:16.66%}.kpd-3{width:25%}.kpd-4{width:33.33%}.kpd-5{width:41.66%}.kpd-5-half{width:47.66%}.kpd-6{width:50%}.kpd-7{width:58.33%}.kpd-8{width:66.66%}.kpd-9{width:75%}.kpd-10{width:83.33%}.kpd-11{width:91.66%}.kpd-12{width:100%}[class*="kpd-"]{float:left;padding:15px;border:0px solid #ccc}[class*="no"]{float:left;padding:0}[class*="padd20"]{display:block;padding:20px}.row:after{content:"";clear:both;display:inline-table}.tleft{text-align:left}
+.tright{text-align:right}
+.tcenter{text-align:center}
+
+.mk-inner{display:block;width:100%;height:auto;max-height:450px;overflow:auto;margin:10px auto 12px auto;}
+.mk-inner p{display:block;width:90%;height:auto;margin:0 auto;font-size: calc(28px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:500;padding:.5em 1em .5em;text-shadow:0 0 5px #000;}
+
+
+/*** SVG ***/
+.svg-icon-close {width: 1em;height: 1em;float:right;}
+.svg-icon-close path,
+.svg-icon-close polygon,
+.svg-icon-close rect {fill: #ffffff;}
+.svg-icon-close circle {stroke: #ffffff;stroke-width: 1;}
+
+
+.svg-icon-show {width: 2.2em;height: 2.2em;margin:0 auto;background-color:rgba(0,0,0,.9);border-radius:5px;}
+.svg-icon-show path,
+.svg-icon-show polygon,
+.svg-icon-show rect {fill: #fff;}
+.svg-icon-show circle {stroke: #fff;stroke-width: 1;}
+
+
+
+#mkthirds-overlay{display:block;width:60%;height:auto;padding:0;background-color:rgba(0,0,0,0.0);border-radius:7px;font-size: calc(18px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;opacity:1;position:fixed;bottom:10%;left:0%;transition: ease-in-out 1s;}
+
+#mkthirds-overlay:target{display:block;width:60%;height:auto;padding:0;background-color:rgba(0,0,0,0.70);border-radius:7px;font-size: calc(18px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;position:fixed;bottom:10%;left:-102%;opacity:0;}
+#showagain {display:block;}
+
+#showagain .showme,#mkthirds-overlay:target + .showme{display:block;padding:.5em 1em .5em;text-align:center;position:fixed;bottom:2%;left:.5%;opacity:1;}
+
+#showagain:target .showme{display:block;padding:.5em 1em .5em;text-align:center;position:fixed;bottom:2%;left:.5%;opacity:.5!important;}
+
+.clock strong{display:block;max-width:300px;font-style:normal;padding:.5em 1em .5em;font-size: calc(22px + 6 * ((100vw - 320px) / 680));background-color:rgba(0,0,0,.6);border-radius:5px;text-align:center;font-family:"Lucida Console", Monaco, monospace;margin-top:-10px;float:left;}
+/*** SVG Timer Icon ***/
+.svg-icon-timer {width: 1.4em;height: 1.4em;margin-right:0;background-color:#000;border-radius:5px 0 0 5px;float:left;}
+.svg-icon-timer path,
+.svg-icon-timer polygon,
+.svg-icon-timer rect {fill: #cccccc;}
+.svg-icon-timer circle {stroke: #cccccc;stroke-width: 2;}
+
+.black{background: rgb(39,39,39);
+background: -moz-linear-gradient(-90deg, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+background: linear-gradient(-90deg, rgba(39,39,39,0) 0%, rgba(34,34,34,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#222222",GradientType=1);background-repeat:repeat;background-size:auto 100%;background-position:0px 0;}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+<div id="showagain" class="tab">
+<div class="showme"><a href="#showagain"><svg class="svg-icon-show" viewBox="0 0 20 20">
+							<path d="M13.889,11.611c-0.17,0.17-0.443,0.17-0.612,0l-3.189-3.187l-3.363,3.36c-0.171,0.171-0.441,0.171-0.612,0c-0.172-0.169-0.172-0.443,0-0.611l3.667-3.669c0.17-0.17,0.445-0.172,0.614,0l3.496,3.493C14.058,11.167,14.061,11.443,13.889,11.611 M18.25,10c0,4.558-3.693,8.25-8.25,8.25c-4.557,0-8.25-3.692-8.25-8.25c0-4.557,3.693-8.25,8.25-8.25C14.557,1.75,18.25,5.443,18.25,10 M17.383,10c0-4.07-3.312-7.382-7.383-7.382S2.618,5.93,2.618,10S5.93,17.381,10,17.381S17.383,14.07,17.383,10"></path>
+						</svg></a> <a href="#mkthirds-overlay"><svg class="svg-icon-show" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+						</svg></a></div>
+   <div id="mkthirds-overlay">
+     
+     
+       <div class="mk-inner black">
+       
+       
+         <div class="kpd-12">
+             <p class="clock"><svg class="svg-icon-timer" viewBox="0 0 20 20">
+							<path d="M10.25,2.375c-4.212,0-7.625,3.413-7.625,7.625s3.413,7.625,7.625,7.625s7.625-3.413,7.625-7.625S14.462,2.375,10.25,2.375M10.651,16.811v-0.403c0-0.221-0.181-0.401-0.401-0.401s-0.401,0.181-0.401,0.401v0.403c-3.443-0.201-6.208-2.966-6.409-6.409h0.404c0.22,0,0.401-0.181,0.401-0.401S4.063,9.599,3.843,9.599H3.439C3.64,6.155,6.405,3.391,9.849,3.19v0.403c0,0.22,0.181,0.401,0.401,0.401s0.401-0.181,0.401-0.401V3.19c3.443,0.201,6.208,2.965,6.409,6.409h-0.404c-0.22,0-0.4,0.181-0.4,0.401s0.181,0.401,0.4,0.401h0.404C16.859,13.845,14.095,16.609,10.651,16.811 M12.662,12.412c-0.156,0.156-0.409,0.159-0.568,0l-2.127-2.129C9.986,10.302,9.849,10.192,9.849,10V5.184c0-0.221,0.181-0.401,0.401-0.401s0.401,0.181,0.401,0.401v4.651l2.011,2.008C12.818,12.001,12.818,12.256,12.662,12.412"></path>
+						</svg><strong id="mktime"></strong></p>
+         </div>
+
+         
+         
+       </div>
+     </div>
+     </div>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+       
+   </div>
+   
+
+</div>
+   
+
+
+
+
+	
+
+
+<script>
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+        document.getElementById('mktime').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MK 3rd overlay - 01</title>
+<style>
+*{box-sizing:border-box;}
+body{margin:0 auto;width:100%;}
+.xcr::-webkit-scrollbar{width:8px}
+.xcr::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);}
+.xcr::-webkit-scrollbar-thumb{background:#0CF;-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,.5)}
+.xcr::-webkit-scrollbar-thumb:window-inactive{background:#0CF;}
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+
+#mkthirds-overlay{display:block;width:60%;height:auto;padding:.5em 1em .5em;background-color:rgba(0,0,0,0.70);border-radius:7px;font-size: calc(18px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;transform:translate(20px,20px);opacity:1;position:fixed;bottom:20%;left:2%;transition: ease-in-out 1s;}
+.mk-title h2{display:block;width:90%;height:auto;margin:0 auto;font-size: calc(20px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:500;}
+.mk-inner{display:block;width:100%;height:auto;max-height:450px;overflow:auto;margin:10px auto 12px auto;}
+.mk-inner p{display:block;width:100%;height:auto;margin:0 auto;font-size: calc(13px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:100;}
+
+
+/*** SVG ***/
+.svg-icon-close {width: 1em;height: 1em;float:right;}
+.svg-icon-close path,
+.svg-icon-close polygon,
+.svg-icon-close rect {fill: #ffffff;}
+.svg-icon-close circle {stroke: #ffffff;stroke-width: 1;}
+
+
+.svg-icon-show {width: 2.2em;height: 2.2em;margin:0 auto;background-color:rgba(0,0,0,.9);border-radius:5px;}
+.svg-icon-show path,
+.svg-icon-show polygon,
+.svg-icon-show rect {fill: #fff;}
+.svg-icon-show circle {stroke: #fff;stroke-width: 1;}
+
+
+#mkthirds-overlay:target{display:block;width:0%;height:auto;padding:0em 0em 0em;background-color:rgba(0,0,0,0.70);border-radius:7px;font-size: calc(18px + 4 * ((100vw - 320px) / 680));color:#f1f1f1;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;transform:translate(20px,20px);position:fixed;bottom:-120%;left:2%;opacity:0;}
+#showagain {display:block;}
+
+#showagain .showme,#mkthirds-overlay:target + .showme{display:block;padding:.5em 1em .5em;text-align:center;position:fixed;bottom:2%;left:.5%;opacity:1;}
+
+#showagain:target .showme{display:block;padding:.5em 1em .5em;text-align:center;position:fixed;bottom:2%;left:.5%;opacity:.5!important;}
+
+</style>
+</head>
+
+<body>
+<div id="showagain" class="tab">
+<div class="showme"><a href="#showagain"><svg class="svg-icon-show" viewBox="0 0 20 20">
+							<path d="M17.657,2.982H2.342c-0.234,0-0.425,0.191-0.425,0.426v10.21c0,0.234,0.191,0.426,0.425,0.426h3.404v2.553c0,0.397,0.48,0.547,0.725,0.302l2.889-2.854h8.298c0.234,0,0.426-0.191,0.426-0.426V3.408C18.083,3.174,17.892,2.982,17.657,2.982M17.232,13.192H9.185c-0.113,0-0.219,0.045-0.3,0.124l-2.289,2.262v-1.96c0-0.233-0.191-0.426-0.425-0.426H2.767V3.833h14.465V13.192z M10,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.488-0.668,1.488-1.489C11.488,7.905,10.821,7.237,10,7.237 M10,9.364c-0.352,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C10.638,9.077,10.351,9.364,10,9.364 M14.254,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489s1.489-0.668,1.489-1.489C15.743,7.905,15.075,7.237,14.254,7.237 M14.254,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.352,0,0.639,0.287,0.639,0.638C14.893,9.077,14.605,9.364,14.254,9.364 M5.746,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.489-0.668,1.489-1.489C7.234,7.905,6.566,7.237,5.746,7.237 M5.746,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C6.384,9.077,6.096,9.364,5.746,9.364"></path>
+						</svg></a></div>
+   <div id="mkthirds-overlay">
+     <div class="mk-title">
+     <a href="#mkthirds-overlay"><svg class="svg-icon-close" viewBox="0 0 20 20">
+							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+						</svg></a>
+       <h2 contenteditable="true" spellcheck="false">Editable Title</h2>
+       <div class="mk-inner xcr" contenteditable="true" spellcheck="false">
+         <p>Editable content</p>
+       </div>
+     </div>   
+   </div>
+   
+   
+</div>
+   
+</body>
+</html>
