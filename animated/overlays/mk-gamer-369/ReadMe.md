@@ -32,5 +32,6 @@ Interested in knowing a little bit more about this project? Scroll down then.
 
 ### Links
 
-- [!Online Info &amp; Demo](https://mkbres.github.io/overlays/animated/overlays/mk-gamer-369/)
-- [!Suggestions, Ideas &amp; Feedback](https://github.com/mkbres/overlays/discussions)
+- [Online Info &amp; Demo](https://mkbres.github.io/overlays/animated/overlays/mk-gamer-369/)
+- [Suggestions, Ideas &amp; Feedback](https://github.com/mkbres/overlays/discussions)
+- [🔥Free Download](https://marketerbay.com/product/gamer-369-overlay/)
