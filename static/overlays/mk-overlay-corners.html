@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay Overlay - Corners</title>
+<style>
+*{box-sizing:border-box;}
+body{width:100vw;margin:0 auto;}
+
+.xcr::-webkit-scrollbar {width:5px;}
+.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.1);-webkit-border-radius:1px;border-radius:1px;}
+.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#4691f6;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+.xcr::-webkit-scrollbar-thumb:window-inactive {background: rgba(0%,100%,100%,.2);border:1px solid #000;}
+#container{font-size: calc(17px + 6 * ((100vw - 320px) / 680));font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-weight:500;text-transform:uppercase;}
+
+#mkleftTop{display:block;width:400px;max-width:600px;height:auto;position:fixed;top:10px;left:10px;padding:.5em 1em .5em;}
+#mkrightTop{display:block;width:400px;max-width:600px;height:auto;position:fixed;top:10px;right:10px;padding:.5em 1em .5em;}
+#mkleftBottom{display:block;width:400px;max-width:600px;height:auto;position:fixed;bottom:10px;left:10px;padding:.5em 1em .5em;}
+#mkrightBottom{display:block;width:400px;max-width:600px;height:auto;position:fixed;bottom:10px;right:10px;padding:.5em 1em .5em;}
+
+
+
+#mkpanel{display:block;width:60%;height:80vh;padding:1em;position:fixed;top:10%;left:20%;transition: ease-in-out .3s;}
+
+
+.bgdark{background-color:rgba(0,0,0,.60);}
+.whitecolor{color:#f1f1f1;}
+
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+
+.clipleftTop{clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%);}
+.cliprightBottom{clip-path: polygon(3% 0, 100% 0, 100% 100%, 0 100%);}
+.cliprightTop{clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%);}
+.clipleftBottom{clip-path: polygon(0 0, 97% 0, 100% 100%, 0 100%);}
+
+
+.svg-icon-trigger {width: 4em;height: 4em;background-color:#000;border-radius:5px;}
+.svg-icon-trigger path,
+.svg-icon-trigger polygon,
+.svg-icon-trigger rect {fill: #4691f6;}
+.svg-icon-trigger circle {stroke: #4691f6;stroke-width: 1;}
+
+button:active .svg-icon-trigger,
+button:focus.svg-icon-trigger{transform:rotateY(180deg);}
+
+
+.mkhide{transform:translateY(-100vh);transition: ease-in-out 1s;}
+.btntoggle{display:block;width:120px;height:auto;position:fixed;left:45%;bottom: 10px;}
+.innerbox{display:block;width:95%;height:300px;max-height:450px;margin:0 auto;padding:.3em;overflow:auto; text-transform:none;font-weight:300;}
+/*** Selection styled up ***/
+::-moz-selection {color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{border:none;box-shadow:none; outline:none;}
+button{background:none;border:none; outline:none;cursor:pointer;}
+
+</style>
+</head>
+
+<body>
+
+
+<div id="container">
+
+<!-- Top Left -->
+  <div id="mkleftTop" class="text-left bgdark whitecolor clipleftTop" contenteditable="true" spellcheck="false">
+    Text Left Top
+  </div>
+<!--/ Top Left -->  
+
+
+<!-- Top Right -->
+  <div id="mkrightTop" class="text-right bgdark whitecolor cliprightTop" contenteditable="true" spellcheck="false">
+    Text Right Top
+  </div>
+<!--/ Top Right --> 
+
+
+
+<!-- Bottom Left --> 
+  <div id="mkleftBottom" class="text-left bgdark whitecolor clipleftBottom" contenteditable="true" spellcheck="false">
+   Text Left Bottom
+  </div>
+<!--/ Bottom Left --> 
+
+
+<!-- Bottom Right -->
+  <div id="mkrightBottom" class="text-right bgdark whitecolor cliprightBottom" contenteditable="true" spellcheck="false">
+   Text Right Bottom
+  </div>
+<!--/ Bottom Right -->
+
+
+
+ <div id="mkpanel" class="bgdark whitecolor ">
+ <h2 class="text-center" contenteditable="true" spellcheck="false">Type A Catchy Title Here</h2>
+   <div class="innerbox xcr" contenteditable="true" spellcheck="false">
+   Content editable. Type your own text here
+     
+   </div>
+ </div>
+
+
+<div class="btntoggle text-center">
+  <button onclick="showPanel()"><svg class="svg-icon-trigger" viewBox="0 0 20 20"><path d="M12.546,4.6h-5.2C4.398,4.6,2,7.022,2,10c0,2.978,2.398,5.4,5.346,5.4h5.2C15.552,15.4,18,12.978,18,10C18,7.022,15.552,4.6,12.546,4.6 M12.546,14.6h-5.2C4.838,14.6,2.8,12.536,2.8,10s2.038-4.6,4.546-4.6h5.2c2.522,0,4.654,2.106,4.654,4.6S15.068,14.6,12.546,14.6 M12.562,6.2C10.488,6.2,8.8,7.904,8.8,10c0,2.096,1.688,3.8,3.763,3.8c2.115,0,3.838-1.706,3.838-3.8C16.4,7.904,14.678,6.2,12.562,6.2 M12.562,13C10.93,13,9.6,11.654,9.6,10c0-1.654,1.33-3,2.962-3C14.21,7,15.6,8.374,15.6,10S14.208,13,12.562,13"></path></svg></button>
+  </div>
+
+</div>
+
+
+<script>
+function showPanel() {
+ var element = document.getElementById("mkpanel");
+element.classList.toggle("mkhide");
+};
+</script>
+
+</body>
+</html>
