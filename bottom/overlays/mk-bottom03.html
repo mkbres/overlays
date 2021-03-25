@@ -9,8 +9,16 @@
 .xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.1);-webkit-border-radius:1px;border-radius:1px;}
 .xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#4691f6;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
 .xcr::-webkit-scrollbar-thumb:window-inactive {background: rgba(0%,100%,100%,.2);border:1px solid #000;}
+
+/*** Firefox Custom Scroolbar ***/
+.scroller {
+overflow-y: scroll;
+  scrollbar-color: #4691f6 rgba(0,0,0,0.6);
+  scrollbar-width: thin;
+}
+
 *{box-sizing:border-box}
-body{width:100vw;height:100vh;margin:0 auto;}
+body{width:100vw;height:100vh;margin:0 auto;overflow:hidden;}
 #mk-container{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
 .row:after{content:'';display:inline-table;clear:both;}
 
@@ -54,7 +62,9 @@ body{width:100vw;height:100vh;margin:0 auto;}
 .droppingstyle svg,
 #dmca svg{display:block;width:100%;height:auto;margin:0 auto;}
 
-
+#dmca:target{transform:scale(1.5,1.5);}
+.dmcaheader{transition: ease-in-out 1s;}
+.dmcaheader:hover{box-shadow:0px 1px 12px rgba(0,0,0,.5);}
 </style>
 </head>
 
@@ -73,7 +83,7 @@ body{width:100vw;height:100vh;margin:0 auto;}
  <strong id="mktime" class="ditime"></strong>  
   
                             <!--- Bottom Text --->
-                       <div class="bottomtxt xcr">
+                       <div class="bottomtxt xcr scroller">
                          <p contenteditable="true" spellcheck="false">this text is editable and <strong>DMCA</strong> can be moved</p>
                        </div>
 </div>    
@@ -86,7 +96,7 @@ body{width:100vw;height:100vh;margin:0 auto;}
   
  <div id="dmca">
     <div class="dmcaheader">
-     <div class="droppingstyle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 133" width="300" height="133">
+     <div class="droppingstyle"><a href="#dmca"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 133" width="300" height="133">
 	<style>
 		tspan { white-space:pre }
 		.shp0 { fill: #212121 } 
@@ -102,7 +112,7 @@ body{width:100vw;height:100vh;margin:0 auto;}
 	<path id="locked-sq" class="shp3" d="M22.41 28.17L58.47 28.17C60.68 28.17 62.47 29.96 62.47 32.17L62.47 67.44C62.47 69.65 60.68 71.44 58.47 71.44L22.41 71.44C20.2 71.44 18.41 69.65 18.41 67.44L18.41 32.17C18.41 29.96 20.2 28.17 22.41 28.17Z" />
 	<path id="locked-inner" class="shp2" d="M45.96 59.12C45.91 59.23 45.8 59.29 45.65 59.29L33 59.29C32.85 59.29 32.74 59.23 32.69 59.12C32.63 59.01 32.64 58.88 32.71 58.73L37.9 47.87C35.7 47.2 34.11 45.38 34.11 43.23C34.11 40.5 36.63 38.29 39.75 38.29C42.86 38.29 45.38 40.5 45.38 43.23C45.38 45.62 43.43 47.62 40.85 48.07L45.94 58.73C46.01 58.88 46.02 59.01 45.96 59.12Z" />
 	<path id="locked-cgs" class="shp3" d="M28.22 25.17L22.38 24.69C22.38 24.69 26.09 16.03 29.01 13.63C31.93 11.23 35.91 10.02 39.36 9.78C42.81 9.54 50.78 12.67 53.16 17.24C55.55 21.81 56.61 25.17 56.61 25.17L50.51 25.41C50.51 25.41 48.65 19.88 47.06 18.2C45.47 16.52 41.22 14.83 39.63 14.83C38.04 14.83 33.52 16.27 31.93 18.44C30.34 20.6 28.48 24.45 28.22 25.17Z" />
-</svg></div>
+</svg></a></div>
     </div>
   </div> 
   
@@ -179,3 +189,4 @@ function dragElement(elmnt) {
    
 </body>
 </html>
+
