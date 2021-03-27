@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - Bottom Overlay 05</title>
+<style>
+
+.xcr::-webkit-scrollbar {width:5px;}
+.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.1);-webkit-border-radius:1px;border-radius:1px;}
+.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#4691f6;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+.xcr::-webkit-scrollbar-thumb:window-inactive {background: rgba(0%,100%,100%,.2);border:1px solid #000;}
+/*** Firefox Custom Scroolbar ***/
+.ffxcr {overflow-y: scroll;scrollbar-color: #4691f6 rgba(0,0,0,0.4);scrollbar-width: thin;}
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+*{box-sizing:border-box}
+body{width:100vw;height:100vh;margin:0 auto;overflow:hidden;}
+
+.row:after{content:'';display:inline-table;clear:both;}
+
+.tleft{text-align:left;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+
+
+#mkcontainer{display:block;width:100%;height:auto;max-height:100px;padding:0em;position:fixed;bottom:50px;left:0;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;transition:ease-in-out 1s;font-size:2vw;color:#ffffff;text-shadow:0 1px 5px #000;transform:translateY(0vh);animation:showIt 18s ease-in-out;opacity:0; animation-iteration-count: 1;animation-delay:0s}
+
+#mk-left{display:block;width:49.50%;height:auto;text-align:right;float:left;overflow:hidden;}
+
+#mk-center{display:block;width:1%;height:auto;text-align:center;float:left;overflow:hidden;box-shadow:inset -5px 0 0 #F93, inset 5px 0 0 #C39;}
+
+#mk-right{display:block;width:49.50%;height:auto;text-align:left;float:left;overflow:hidden;}
+
+#mk-left .showoff{display:block;width:100%;height:auto;margin-right:0px;float:right;text-align:right;padding:0;transform:translateX(100vw);animation: ShowLeft 18s infinite;animation-delay:1.3s;}
+#mk-left .thename{font-weight:500;font-size:5vw;padding-right:20px;background: rgb(39,39,39);
+background: -moz-linear-gradient(90deg, rgba(39,39,39,0) 11%, rgba(34,34,34,0.361884109112395) 100%);
+background: -webkit-linear-gradient(90deg, rgba(39,39,39,0) 11%, rgba(34,34,34,0.361884109112395) 100%);
+background: linear-gradient(90deg, rgba(39,39,39,0) 11%, rgba(34,34,34,0.361884109112395) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#272727",endColorstr="#222222",GradientType=1);}
+
+#mk-right .showoff{display:block;width:100%;height:auto;margin-left:0;text-align:left;transform:translateX(-100vw);animation: ShowRight 18s infinite;animation-delay:1.4s;}
+#mk-right p{background: rgb(57,57,57);
+background: -moz-linear-gradient(-90deg, rgba(57,57,57,0) 11%, rgba(0,0,0,0.361884109112395) 100%);
+background: -webkit-linear-gradient(-90deg, rgba(57,57,57,0) 11%, rgba(0,0,0,0.361884109112395) 100%);
+background: linear-gradient(-90deg, rgba(57,57,57,0) 11%, rgba(0,0,0,0.361884109112395) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#393939",endColorstr="#000000",GradientType=1);}
+.bg{transform:translateY(-30px);margin-bottom:-5px;overflow:hidden;}
+#mk-right span:nth-child(1){display:block;text-indent:10px;font-size:2vw;}
+#mk-right span:nth-child(2){display:block;text-indent:12px;font-size:2vw;}
+.orange,
+.blue{display:block;width:50%;height:130px;margin:0 auto;float:left;animation-delay:4s;}
+.orange{background-color:#F93;transform:translateY(-150vh);animation: ShowTop 9s infinite;transform-origin:top;opacity:0;}
+.blue{background-color:#C39;transform:translateY(150vh);animation: ShowBottom 9s infinite;transform-origin:bottom;opacity:0;}
+
+
+@keyframes showIt{
+	0%{transform:translateY(280vh);opacity:0;}
+	3%{transform:translateY(0vh);opacity:1;}
+	10%{transform:translateY(0vh);opacity:1;}
+	12%{transform:translateY(0vh);opacity:1;}
+	15%{transform:translateY(0vh);opacity:1;}
+	50%{transform:translateY(0vh);opacity:1;}
+	90%{transform:translateY(0vh);opacity:1;}
+	95%{transform:translateY(0vh);opacity:1;}
+	100%{transform:translateY(280vh);opacity:1;}
+	}
+
+@keyframes ShowLeft{
+	0%{transform:translateX(100vw);opacity:0;}
+	10%{transform:translateX(-0.1vw);opacity:1;}
+	50%{transform:translateX(-0.1vw);opacity:1;}
+	90%{transform:translateX(-0.1vw);opacity:1;}
+	95%{transform:translateX(100vw);opacity:1;}
+	100%{transform:translateX(100vw);opacity:0;}
+	}
+@keyframes ShowRight{
+	0%{transform:translateX(-100vw);opacity:0;}
+	10%{transform:translateX(0.1vw);opacity:1;}
+	50%{transform:translateX(0.1vw);opacity:1;}
+	90%{transform:translateX(0.1vw);opacity:1;}
+	95%{transform:translateX(-100vw);opacity:1;}
+	100%{transform:translateX(-100vw);opacity:0;}
+	}
+	
+	@keyframes ShowTop{
+	0%{transform:translateY(-50vh);opacity:0;}
+	1%{transform:translateY(-50vh);opacity:0;}
+	7%{transform:translateY(-50vh);opacity:0;}
+	10%{transform:translateY(0vh);opacity:1;}
+	15%{transform:translateY(0vh);opacity:1;}
+	25%{transform:translateY(0vh);opacity:1;}
+	40%{transform:translateY(0vh);opacity:1;}
+	50%{transform:translateY(0vh);opacity:1;}
+	70%{transform:translateY(0vh);opacity:1;}
+	95%{transform:translateY(50vh);opacity:1;}
+	100%{transform:translateY(50vh);opacity:0;}
+	}
+	
+	@keyframes ShowBottom{
+	0%{transform:translateY(50vh);opacity:0;}
+	1%{transform:translateY(50vh);opacity:0;}
+	7%{transform:translateY(50vh);opacity:0;}
+	10%{transform:translateY(0vh);opacity:1;}
+	15%{transform:translateY(0vh);opacity:1;}
+	25%{transform:translateY(0vh);opacity:1;}
+	40%{transform:translateY(0vh);opacity:1;}
+	50%{transform:translateY(0vh);opacity:1;}
+	70%{transform:translateY(0vh);opacity:1;}
+	95%{transform:translateY(-50vh);opacity:1;}
+	100%{transform:translateY(-50vh);opacity:0;}
+	}
+
+.svg-icon-heart{width: 2.7em;height: 2.7em;}
+.svg-icon-heart path,
+.svg-icon-heart polygon,
+.svg-icon-heart rect {fill: #F93;}
+.svg-icon-heart circle {stroke: #F93;stroke-width: 1;}
+.btn{display:block;width:40px;height:40px;text-align:center;padding:.3em;background-color:#C39;position:fixed;top:40px;left:20px;}
+.btn svg{width:100%;height:auto;}
+button{ background-color:transparent;border:none; outline:none;cursor:pointer; }
+.loop{animation-iteration-count: infinite!important;transition:ease-in-out 1s;}
+</style>
+</head>
+
+<body>
+<button class="btn" onclick="doLoop()"><svg class="svg-icon-heart" viewBox="0 0 20 20">
+							<path d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
+						</svg></button>
+
+  <div id="mkcontainer" class="">
+  
+  <div class="row">
+  
+  
+     <div id="mk-left" class="">
+        <div class="showoff">
+         <span class="thename" contenteditable="true" spellcheck="false">Screen Name</span>
+        </div>
+     </div>
+     
+     
+     <div id="mk-center" class="">
+         <div class="row">
+           <div class="orange"></div>
+           <div class="blue"></div>
+       </div>
+     </div>
+     
+     
+     <div id="mk-right" class="">
+       <div class="showoff">
+       <p class="bg">
+          <span contenteditable="true" spellcheck="false">this is editable text line One</span>
+          <span contenteditable="true" spellcheck="false">this is editable text line Two</span>
+       </p>
+       </div>
+     </div>
+  
+  </div>
+  
+  </div>
+  
+
+
+
+
+
+
+
+<script>
+function doLoop() {
+ var element = document.getElementById("mkcontainer");
+element.classList.toggle("loop");
+};
+</script>
+
+
+
+</body>
+</html>
