@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com Animated Overlay - Be right back - 01</title>
+<style>
+.xcr::-webkit-scrollbar {width:5px;}
+.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.1);-webkit-border-radius:1px;border-radius:1px;}
+.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:1px;border-radius:1px;background:#4691f6;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+.xcr::-webkit-scrollbar-thumb:window-inactive {background: rgba(0%,100%,100%,.2);border:1px solid #000;}
+/*** Firefox Custom Scroolbar ***/
+.ffxcr {overflow-y: scroll;scrollbar-color: #4691f6 rgba(0,0,0,0.4);scrollbar-width: thin;}
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+*{box-sizing:border-box}
+body{width:100vw;height:100vh;margin:0 auto;overflow:hidden;}
+
+#marketerbay{display:block;width:100vw;height:100vh;text-align:center;transform:translateY(0vh);background-color:rgba(0,0,0,0.70); animation: show 2s;animation-iteration-count:1;}
+
+#mktxt{display:block;width:80%;height:auto;max-height:300px;margin:0 auto;overflow-x:hidden;overflow-y:auto;padding:1em;text-align:center;transform:translateY(30vh);}
+.mk-inner{font-size:5vw;color:#fff;text-shadow:0 3px 7px #000;font-weight:600;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+@keyframes show{
+	0%{transform:translateY(100vh);}
+	100%{transform:translateY(0vh);}
+}
+.changecolors{display:block;width:90%;height:auto;margin:0 auto;text-align:center;position:fixed;bottom:80px;z-index:100;}
+.btn{display:inline-block;width:50px;height:auto;margin-left:10px;text-align:center;}
+.btn svg{width:100%;height:auto;}
+button{ background-color:transparent;border:none; outline:none;cursor:pointer; }
+
+.green{background: rgb(241,239,38);
+background: -moz-linear-gradient(331deg, rgba(241,239,38,1) 0%, rgba(78,171,61,1) 100%);
+background: -webkit-linear-gradient(331deg, rgba(241,239,38,1) 0%, rgba(78,171,61,1) 100%);
+background: linear-gradient(331deg, rgba(241,239,38,1) 0%, rgba(78,171,61,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1ef26",endColorstr="#4eab3d",GradientType=1);}
+
+.blue{background: rgb(241,38,38);
+background: -moz-linear-gradient(331deg, rgba(241,38,38,1) 0%, rgba(44,66,92,1) 48%, rgba(32,84,166,1) 100%);
+background: -webkit-linear-gradient(331deg, rgba(241,38,38,1) 0%, rgba(44,66,92,1) 48%, rgba(32,84,166,1) 100%);
+background: linear-gradient(331deg, rgba(241,38,38,1) 0%, rgba(44,66,92,1) 48%, rgba(32,84,166,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f12626",endColorstr="#2054a6",GradientType=1);}
+
+.red{background: rgb(76,14,14);
+background: -moz-linear-gradient(331deg, rgba(76,14,14,1) 0%, rgba(255,20,20,1) 100%);
+background: -webkit-linear-gradient(331deg, rgba(76,14,14,1) 0%, rgba(255,20,20,1) 100%);
+background: linear-gradient(331deg, rgba(76,14,14,1) 0%, rgba(255,20,20,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c0e0e",endColorstr="#ff1414",GradientType=1);}
+
+.svg-icon-bgreen {width: 5em;height: 5em;background-color:rgba(0,0,0,.5);padding:5px;border-radius:5px;}
+.svg-icon-bgreen path,
+.svg-icon-bgreen polygon,
+.svg-icon-bgreen rect {fill: #0C6;}
+.svg-icon-bgreen circle {stroke: #0C6;stroke-width: 1;}
+
+.svg-icon-bblue {width: 5em;height: 5em;background-color:rgba(0,0,0,.5);padding:5px;border-radius:5px;}
+.svg-icon-bblue path,
+.svg-icon-bblue polygon,
+.svg-icon-bblue rect {fill: #0CC;}
+.svg-icon-bblue circle {stroke: #0CC;stroke-width: 1;}
+
+.svg-icon-bred {width: 5em;height: 5em;background-color:rgba(0,0,0,.5);padding:5px;border-radius:5px;}
+.svg-icon-bred path,
+.svg-icon-bred polygon,
+.svg-icon-bred rect {fill: #F00;}
+.svg-icon-bred circle {stroke: #F00;stroke-width: 1;}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MK Full Screen Container -->
+  <div id="marketerbay" class=" ">
+  
+  <!-- Editable Text Container -->
+     <div id="mktxt" class="xcr ffxcr">
+      
+       <div class="mk-inner" contenteditable="true" spellcheck="false">
+         Be right back. 5 minutes
+       </div>
+     
+     </div>
+  <!--/ Editable Text Container -->
+  
+  
+ <!-- Option to change colors of the main background ---> 
+ <div class="changecolors">
+ 
+   
+   <button class="btn" onclick="greenColor()"><svg class="svg-icon-bgreen" viewBox="0 0 20 20"><path fill="none" d="M10,0.562c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.406,4.774,15.195,0.562,10,0.562 M10,18.521c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.418,10,1.418s8.552,3.828,8.552,8.551S14.723,18.521,10,18.521"></path></svg></button>
+   
+   <button class="btn" onclick="blueColor()"><svg class="svg-icon-bblue" viewBox="0 0 20 20"><path fill="none" d="M10,0.562c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.406,4.774,15.195,0.562,10,0.562 M10,18.521c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.418,10,1.418s8.552,3.828,8.552,8.551S14.723,18.521,10,18.521"></path></svg></button>
+   
+   <button class="btn" onclick="redColor()"><svg class="svg-icon-bred" viewBox="0 0 20 20"><path fill="none" d="M10,0.562c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.406,4.774,15.195,0.562,10,0.562 M10,18.521c-4.723,0-8.551-3.829-8.551-8.552S5.277,1.418,10,1.418s8.552,3.828,8.552,8.551S14.723,18.521,10,18.521"></path></svg></button>
+   
+ </div> 
+ <!--/ Option Chnage colors --> 
+  
+  </div>
+<!--/ MK Full Screen Container -->
+
+
+
+
+
+
+<script>
+function greenColor() {
+ var element = document.getElementById("marketerbay");
+element.classList.toggle("green");
+element.classList.remove("red" , "blue");
+};
+
+function blueColor() {
+ var element = document.getElementById("marketerbay");
+element.classList.toggle("blue");
+element.classList.remove("green","red");
+};
+
+function redColor() {
+ var element = document.getElementById("marketerbay");
+element.classList.toggle("red");
+element.classList.remove("blue","green");
+};
+</script>
+
+
+</body>
+</html>
