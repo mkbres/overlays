@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketerbay.com - Bottom Overlay 06</title>
+<style>
+::-moz-selection { /* Code for Firefox */
+  color: #FC0;background: #22434A;}
+::selection {color: #FC0;background: #22434A;}
+:focus{background: rgba(0,0,0,0.0);border:none;box-shadow:none; outline:none;}
+*{box-sizing:border-box}
+body{width:100vw;height:100vh;margin:0 auto;overflow:hidden;}
+
+
+
+.tleft{text-align:left;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+
+#mkzet{display:block;width:100%;height:220px;position:fixed;bottom:70px;left:0;animation: MarketerBay 120s infinite;opacity:0;transform:translateX(-70vw);border-top:3px solid rgba(255,153,0,0.0);border-bottom:3px solid rgba(255,153,0,0.0);}
+
+#mkzet:hover{ animation-play-state:paused;border-top:3px solid rgba(255,153,0,0.5);border-bottom:3px solid rgba(255,153,0,0.5);cursor:pointer;}
+
+/*** MK Container ***/
+#mkbaycontainer{display:block;width:0%;height:auto;padding:1em;position:fixed;bottom:50px;margin:0 auto;text-align:center;background-color:rgba(0,0,0,0.60);opacity:0;animation: WrapBlack 15s ease-in-out; animation-iteration-count: infinite;transform:translateX(-40vw);}
+
+
+/*** MK Top ***/
+.mktopline{display:block;width:80%;height:auto;padding:.5em 1em .5em;text-align:left;overflow-y:hidden;}
+
+.mktoptext{display:block;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;opacity:1;font-size:3vw;font-weight:500;color:#ffffff;text-shadow:0 1px 5px #000;transform:translateY(70vh);animation: ShowUp 15s ease-in-out; animation-iteration-count: infinite;}
+
+/*** MK Bottom ***/
+.mkbottomline{display:block;width:80%;height:50px;padding:0em 1em .5em;text-align:left;overflow-y:hidden;}
+
+.mkbottomtext{display:block;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;opacity:1;font-size:1.7vw;font-weight:100;color:#ffffff;text-shadow:0 1px 5px #000;transform:translateY(-70vh);animation: ShowOff 15s ease-in-out; animation-iteration-count: infinite;}
+
+
+/*** MK Divider ***/
+.mkdivider{display:block;width:0%;height:5px;background-color:#09C;margin-left:10px;margin-top:0;margin-bottom:0;opacity:0; animation: LineDivider 15s ease-in-out; animation-iteration-count:infinite; transform-origin: left;}
+.mkdivider:before{content:'';display:block;float:left;width:1%;height:5px;background-color:#0CC;transform:translate(0vw,0vh);animation: MakeWider 15s infinite;box-shadow:0 0 20px #fff, 0 0px 8px #fff; animation-delay: 2s;}
+
+
+@keyframes MarketerBay{
+	0%{opacity:0;transform:translateX(-70vw);}
+	1%{opacity:1;transform:translateX(0vw);}
+	12%{opacity:1;transform:translateX(0vw);}
+	13%{opacity:0;transform:translateX(-70vw);}
+	48%{opacity:0;transform:translateX(-70vw);}
+	49%{opacity:0;transform:translateX(-70vw);}
+	50%{opacity:0;transform:translateX(-70vw);}
+	100%{opacity:0;transform:translateX(-70vw);}
+}
+
+
+@keyframes WrapBlack{
+	0%{width:0%;opacity:0;transform:translateX(-40vw);}
+	3%{width:70%;opacity:1;transform:translateX(0vw);}
+	7%{width:70%;opacity:1;transform:translateX(0vw);}
+	20%{width:70%;opacity:1;transform:translateX(0vw);}
+	30%{width:70%;opacity:1;transform:translateX(0vw);}
+	40%{width:70%;opacity:1;transform:translateX(0vw);}
+	50%{width:70%;opacity:1;transform:translateX(0vw);}
+	95%{width:70%;opacity:1;transform:translateX(0vw);}
+	96%{width:80%;opacity:1;transform:translateX(0vw);}
+	98%{width:60%;opacity:1;transform:translateX(0vw);}
+	100%{width:0%;opacity:0;transform:translateX(-40vw);}
+	}
+
+@keyframes LineDivider{
+	0%{width:0%;opacity:0;}
+	5%{width:70%;opacity:1;}
+	10%{width:70%;opacity:1;}
+	20%{width:70%;opacity:1;}
+	30%{width:70%;opacity:1;}
+	40%{width:70%;opacity:1;}
+	50%{width:70%;opacity:1;}
+	95%{width:70%;opacity:1;}
+	96%{width:80%;opacity:1;}
+	98%{width:60%;opacity:1;}
+	100%{width:0%;opacity:0;}
+	}
+	
+@keyframes MakeWider{
+	0%{width:1%;transform:translate(0vw,0vh);}
+	1%{width:5%;transform:translate(0vw,0vh);}
+	10%{width:5%;transform:translate(45vw,0vh);}
+	68%{width:5%;transform:translate(45vw,0vh);}
+	70%{width:10%;transform:translate(45vw,0vh);}
+	75%{width:5%;transform:translate(0vw,0vh);}
+	80%{width:1%;transform:translate(0vw,0vh);}
+	100%{width:1%;transform:translate(0vw,0vh);}
+	}	
+	
+@keyframes ShowUp{
+	0%{transform:translateY(70vh);opacity:0;}
+	8%{transform:translateY(0vh);opacity:1;}
+	50%{transform:translateY(0vh);opacity:1;}
+	80%{transform:translateY(0vh);opacity:1;}
+	92%{transform:translateY(0vh);opacity:1;}
+	93%{transform:translateY(2vh);opacity:1;}
+	95%{transform:translateY(0vh);opacity:.5;}
+	0%{transform:translateY(70vh);opacity:0;}
+}
+
+@keyframes ShowOff{
+	0%{transform:translateY(-70vh);opacity:0;}
+	8%{transform:translateY(0vh);opacity:1;}
+	50%{transform:translateY(0vh);opacity:1;}
+	80%{transform:translateY(0vh);opacity:1;}
+	92%{transform:translateY(0vh);opacity:1;}
+	93%{transform:translateY(-2vh);opacity:1;}
+	95%{transform:translateY(0vh);opacity:.5;}
+	0%{transform:translateY(-70vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="mkzet">
+
+
+<!-- MK Container -->
+  <div id="mkbaycontainer">
+  
+  <!-- MK Top -->
+    <div class="mktopline">
+      <div class="mktoptext" contenteditable="true" spellcheck="false">Screen Name / User Name</div>
+    </div>
+   <!--/ MK Top --> 
+    
+    
+  <!-- MK Divider -->  
+    <div class="mkdivider">
+       
+    </div>
+  <!--/ MK Divider -->   
+    
+   <!-- MK Bottom -->  
+    <div class="mkbottomline">
+      <div class="mkbottomtext" contenteditable="true" spellcheck="false">type something here. Webcam Performer</div>
+    </div>
+  <!--/ MK Bottom --> 
+  
+  
+  </div>
+<!--/ MK Container -->
+
+
+
+</div>
+
+</body>
+</html>
